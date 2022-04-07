@@ -12,6 +12,6 @@ Enforcing a distributed, homogeneous security policy per workload independent of
 === Additional Information
 
 ==== https://github.com/alexandre-cezar/cns-docs/blob/main/Concepts.adoc[Concepts]
-==== https://xxx[Get Started]
-==== https://xxx[System Requirements]
-==== https://xxx[Planning a Microsegmentation Deployment]
+==== https://github.com/alexandre-cezar/cns-docs/blob/main/Get%20Started.adoc[Get Started]
+==== https://github.com/alexandre-cezar/cns-docs/blob/main/System%20Requirements.adoc[System Requirements]
+==== https://github.com/alexandre-cezar/cns-docs/blob/main/Planning.adoc[Planning a Microsegmentation Deployment]
