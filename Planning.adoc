@@ -54,7 +54,7 @@ Some examples are: app=payment, role=frontend, environment=prod, pci=yes
 
 [IMPORTANT]
 ====
-Enforcers will always store custom tags alongside with their source. On AWS, a custom tag called_app=payment_, is ingested as cloud:aws:app=_, on Azure it is ingested as _cloud:azure:app=_ and so forth.
+Enforcers will always store custom tags alongside with their source. On AWS, a custom tag called_app=payment_, is ingested as _cloud:aws:app=_, on Azure it is ingested as _cloud:azure:app=_ and so forth.
 ====
 
 As a reference, you can verify an example of identity attributes retrieved from a resource below:
