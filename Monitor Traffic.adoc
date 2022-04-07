@@ -50,7 +50,7 @@ Next step is to start creating https://xxx[External networks] and defining rules
 You can also use _policy as code_ to automate the policy creation through CI/CD pipelines.
 ====
 
-After creating the required external networks and rulesets, your application flow should be similar to this:
+After creating the required external networks and rulesets and modifying the Namespace Implicit Default to Reject, your application flow should be similar to this:
 
 image::images/monitor_flows_after.png[width=1000]
 
