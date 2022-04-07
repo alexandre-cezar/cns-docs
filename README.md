@@ -3,5 +3,5 @@
 * [Concepts](https://github.com/alexandre-cezar/cns-docs/blob/main/Concepts.adoc)
 * [Get Started](https://github.com/alexandre-cezar/cns-docs/blob/main/Get%20Started.adoc)
 * [System Requirements](https://github.com/alexandre-cezar/cns-docs/blob/main/System%20Requirements.adoc)
-* [Planning](https://github.com/alexandre-cezar/cns-docs/blob/main/Planning.adoc)
+* [Planning a Microsegmentation Deployment](https://github.com/alexandre-cezar/cns-docs/blob/main/Planning.adoc)
 * Configure
