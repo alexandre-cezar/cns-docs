@@ -1,2 +1,1 @@
-# cns-docs
-Microseg docs draft
+==== https://github.com/alexandre-cezar/cns-docs/blob/main/About%20Prisma%20Cloud%20Identity%20Based%20Microsegmentation.adoc[About Prisma Cloud Identity Based Microsegmentation]
