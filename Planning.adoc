@@ -46,7 +46,7 @@ The recommended practice is to leverage the automatic attributes created by the 
 
 These attributes can map your Prisma Cloud Microsegmentation namespaces, platforms, operational systems, images, kubernetes namespaces and are easy to understand from an application owner perspective. "@org" tags are also trusted in the sense that Prisma Cloud manages them directly and Microsegmentation admins are in full control of such tags.
 
-image::images/planning_tags.png[width=500]
+image::images/planning_tags.png[width=600]
 
 But if you're planning to use custom defined identities, it's important to align what they will be with the teams who manage the cloud resources (eg. DevOps, SRE, Cloud Admins) so they can make sure these attributes are added to the resources in their pipeline. The best practice is to keep them easy to understand, reflect the application components and to use attributes that make sense from a business or security perspective.
 
