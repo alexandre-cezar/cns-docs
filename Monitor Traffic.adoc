@@ -7,7 +7,7 @@ With this approach, it becomes easier for security teams to define alarms for gu
 
 A practical example is an application that is made of 4 layers (frontend, api-gw, backend and database). +
 
-image::images/Sample App diagram.jpeg[width=150,align="center"]
+image::images/Sample App diagram.jpeg[width=150, align="center"]
 
 Let's dig into this application flows for a moment.
 
