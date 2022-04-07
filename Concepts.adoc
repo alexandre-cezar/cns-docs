@@ -92,7 +92,7 @@ The addition of these cryptographically signed tags allows Microsegmentation to 
 
 image::images/l4_auth_concept[width=500]
 
-For detailed information about Enforcers, please read the document *https://xxx[How Enforcers work?]*
+For detailed information about Enforcers, please read the document *https://github.com/alexandre-cezar/cns-docs/blob/main/How%20Enforcers%20work%3F.adoc[How Enforcers work?]*
 
 == Processing Unit
 A processing unit represents a unit of computation that the Enforcer will protect by generating a unique identity and enforcing network ruleset. A processing unit can be: +
