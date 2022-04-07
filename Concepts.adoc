@@ -51,7 +51,7 @@ The following example shows an organization named /803920923337065472 with two c
 The aws-dev-826088932159 namespace contains the development environment and the aws-prod-826088932159 account contains the production environment. +
 Both contain the same resources, but one set is under development and the other is in production.
 
-image::concept_namespace[width=1600]
+image::images/concept_namespace[width=500]
 
 [TIP]
 ====
@@ -79,7 +79,7 @@ You deploy it as a service on a virtual machine and as a DaemonSet on a K8s clus
 
 It connects to the Microsegmentation Console API to retrieve network rulesets and to send flow and DNS resolution logs.
 
-image::enforcer_concept[width=1000]
+image::images/enforcer_concept[width=500]
 
 The enforcer can control traffic between processing units at different layers of the network stack.
 
@@ -90,7 +90,7 @@ In this case, it utilizes TCP Fast Open to minimize the round-trip times needed 
 
 The addition of these cryptographically signed tags allows Microsegmentation to exchange and verify the identity of both processing units and validate if there is a network ruleset which will allow or deny traffic between the two endpoints. Once the authentication and authorization is complete, the enforcer allows both processing units to communicate directly.
 
-image::l4_auth_concept[width=1000]
+image::images/l4_auth_concept[width=500]
 
 For detailed information about Enforcers, please read the document *https://xxx[How Enforcers work?]*
 
@@ -104,7 +104,7 @@ A processing unit represents a unit of computation that the Enforcer will protec
 
 The Enforcer assigns identities to the processing units based on the unique combination of attributes a processing unit has and use each respective identity to monitor and protect the network interactions related to a given processing unit.
 
-image::processing Unit.jpeg[width=1000]
+image::images/processing Unit.jpeg[width=500]
 
 == External Networks
 External networks represent workloads without Enforcers or where Enforcers cannot be installed. +
@@ -127,7 +127,7 @@ Enforcer tags, as the name implies, are tags that belong to the agent, rather th
 === Tag Syntax
 The following diagram shows an example of a Microsegmentation tag
 
-image::concept_tags[width=1000]
+image::images/concept_tags[width=500]
 
 Each Microsegmentation tag has at a minimum a key and a value, separated by an equals sign. The key portion of the tag may also include the following symbols. +
 It may begin with either a @ or a $ character. +
@@ -177,7 +177,7 @@ Each network ruleset must have at least one subject, rule, and object. +
 
 The following diagram illustrates the syntax and enforcement of network rulesets.
 
-image::concepts_rulesets[width=1100]
+image::images/concepts_rulesets[width=500]
 
 For simplicity, the diagram above shows a ruleset with just one subject, two rules, and two objects. A ruleset can have multiple subjects, incoming rules, outgoing rules, and objects.
 
@@ -185,7 +185,7 @@ For simplicity, the diagram above shows a ruleset with just one subject, two rul
 For each new session, the Enforcer checks its local network rulesets to find a matching ruleset. +
 It may find multiple matches. If so, it resolves these as follows. +
 
-image::concepts_rulesets_precedence_order.jpeg[width=1000]
+image::images/concepts_rulesets_precedence_order.jpeg[width=500]
 
 Inheritance is an important concept to understand as rulesets created on parent level namespaces are inherit by all child namespaces. +
 This capability allows administrators to define guardrails at the tenant or cloud-account namespaces that will be enforced across all applications.

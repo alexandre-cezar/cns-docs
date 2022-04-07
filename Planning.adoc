@@ -9,7 +9,7 @@ Microsegmentation is a technology that requires proper planning before deploymen
 Following the steps below will ensure a smooth deployment and no impact in existing/new applications enforced.
 
 == Plan and Deploy Phase
-Before starting reading this document, we recommend that you get yourself familiar with the Identity Based Microsegmentation concepts. You can find them https://xxx[here]
+Before starting reading this document, we recommend that you get yourself familiar with the Identity Based Microsegmentation concepts. You can find them https://github.com/alexandre-cezar/cns-docs/blob/main/Concepts.adoc[here]
 
 === Initial Requirements
 The first consideration is the Prisma Cloud Microsegmentation Console. It serves as both the management interface and the API. CNS administrators will use it to define policies, monitor and perform investigations in the protected environment.
@@ -46,7 +46,7 @@ The recommended practice is to leverage the automatic attributes created by the 
 
 These attributes can map your Prisma Cloud Microsegmentation namespaces, platforms, operational systems, images, kubernetes namespaces and are easy to understand from an application owner perspective. "@org" tags are also trusted in the sense that Prisma Cloud manages them directly and Microsegmentation admins are in full control of such tags.
 
-image::planning_tags.png[width=1000]
+image::images/planning_tags.png[width=1000]
 
 But if you're planning to use custom defined identities, it's important to align what they will be with the teams who manage the cloud resources (eg. DevOps, SRE, Cloud Admins) so they can make sure these attributes are added to the resources in their pipeline. The best practice is to keep them easy to understand, reflect the application components and to use attributes that make sense from a business or security perspective.
 
@@ -59,7 +59,7 @@ Enforcers will always store custom tags alongside with their source. On AWS, a c
 
 As a reference, you can verify an example of identity attributes retrieved from a resource below:
 
-image::planning_custom_tags.png[width=350]
+image::images/planning_custom_tags.png[width=350]
 
 An important aspect of custom attributes is where to define them in the system. +
 
@@ -76,7 +76,7 @@ _Tenant -> Cloud Account -> Group_
 
 In the example below we can see a Namespace hierarchy template and the namespace which are automatically created by Prisma Cloud (blue) and the namespaces created by the CNS Administrators (yellow)
 
-image::planning_namespace_example.jpeg[width=1200]
+image::images/planning_namespace_example.jpeg[width=1200]
 
 === Deploy Enforcers
 Deploying Enforcers in the right namespace makes it easier for CNS Administrators to make sure they have the proper application visibility and are ingesting the proper resource metadata. We do not recommend that you aggregate all Enforcers in a single namespace and we do not recommend that you deploy Enforcers in the default namespace (root).
@@ -99,7 +99,7 @@ Each flow can be further analyzed in order to understand the identities of the c
 
 The best practice is to make sure that you have enough time for the application to execute all of its functions, so you can understand what are the expected behaviors during startup, runtime, batch/scheduled events and shutdown)
 
-image::planning_flows.png[width=1000]
+image::images/planning_flows.png[width=1000]
 
 == Policy Design Phase
 
@@ -126,7 +126,7 @@ A best practice is to have a separated environment (staging or dev) where you ca
 
 When analyzing traffic, Prisma Cloud Identity Based Microsegmentation allows you to inspect a flow and review all the events related to it.
 
-image::planning_logs.png[width=1000]
+image::images/planning_logs.png[width=1000]
 
 Once all flows are mapped, it's time to create the policies
 
@@ -147,7 +147,7 @@ We also recommend to leverage Application Profiling and the Out of Box rules as 
 
 An important reminder is that policies are not bi-directional in nature (although they are stateful). This means that rules are applied to the objects matched in the “Applies to” field (Subject).
 
-image::planning_subject.png[width=900]
+image::images/planning_subject.png[width=900]
 
 If “Applies to” does not match both the source and destination, you need to create a separate ruleset for each.
 
@@ -186,7 +186,7 @@ Some examples of policies that would be a great fit for a tenant level namespace
 
 A visualization is provided below:
 
-image::planning_tenant_policies.jpeg[width=1000]
+image::images/planning_tenant_policies.jpeg[width=1000]
 
 === Cloud Account Level Namespace rulesets
 Rulesets that will enforce controls to resources that exist in a cloud account level are supposed to be created in the cloud account namespace.
@@ -199,7 +199,7 @@ Some examples of policies that would be a great fit for a cloud account/datacent
 
 A visualization is provided below:
 
-image::planning_cloudaccount_policies.jpeg[width=1000]
+image::images/planning_cloudaccount_policies.jpeg[width=1000]
 
 === Group Level Namespace rulesets
 Rulesets that will enforce controls to resources that exist in a K8s namespace or are grouped as an application (VMs) are supposed to be created in the child namespaces.
@@ -213,7 +213,7 @@ Some examples of policies that would be a great fit for a child namespace:
 
 A visualization is provided below:
 
-image::planning_group_policies.jpeg[width=1000]
+image::images/planning_group_policies.jpeg[width=1000]
 
 === Application Level Namespace rulesets
 Rulesets that will enforce controls to resources that exist in a K8s namespace are supposed to be created in the namespaces.
@@ -227,7 +227,7 @@ Some examples of policies that would be a great fit for it:
 
 A visualization is provided below:
 
-image::planning_k8s_policies.jpeg[width=1000]
+image::images/planning_k8s_policies.jpeg[width=1000]
 
 == Enforcement Phase
 After AN application in a given namespace was monitored, validation tests were successfully concluded and the proper policies are in place, it's time to enforce microsegmentation.
@@ -243,15 +243,15 @@ The images below represent a basic idea of a flow analysis, starting with flow o
 
 By monitoring the namespace dashboard, CNS administrators can easily identify flows that are being rejected and start a more in-depth analysis.
 
-image::planning_flow_monitoring.png[width=1000]
+image::images/planning_flow_monitoring.png[width=1000]
 
 Next step is to inspect the application flows to identify what flows are being rejected and why.
 
-image::planning_flow_analysis.png[width=1000]
+image::images/planning_flow_analysis.png[width=1000]
 
 Looking at the matching ruleset, we can verify that no policy is actually matching this flow and therefore it is being caught by the namespace default policy, which is now configured as Reject.
 
-image::flow_analysis_trend.png[width=400]
+image::images/flow_analysis_trend.png[width=400]
 
 == Operations Phase
 
