@@ -9,8 +9,8 @@ To quickly get started, complete the following tasks. +
 
 If you want to also quickly apply microsegmentation to an application, follow these additional steps: +
 
-* https://xxx[Monitor Network traffic]
-* https://xxx[Create External Networks]
+* https://github.com/alexandre-cezar/cns-docs/blob/main/Monitor%20Traffic.adoc[Monitor Network traffic]
+* https://github.com/alexandre-cezar/cns-docs/blob/main/Create%20External%20Networks.adoc[Create External Networks]
 * Create Rulesets using:
-  - https://xxx[Out of Box Rules]
-  - https://xxx[Application Profiling]
+  - https://github.com/alexandre-cezar/cns-docs/blob/main/Out%20of%20the%20Box%20Rules.adoc[Out of Box Rules]
+  - https://github.com/alexandre-cezar/cns-docs/blob/main/Application%20Profiling.adoc[Application Profiling]
