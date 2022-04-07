@@ -1,0 +1,35 @@
+= Create External Networks
+Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 5, 2022:
+
+To create an External Network, navigate to your Prisma Cloud Console and under CNS, select your namespace, click on *Network Lists* on the menu bar and click on the "+" button at the right.
+
+image::create network list-1.png[width=1000]
+
+A Guided Wizard will provide the required steps to create an External Network.
+
+* Provide the External Network name: +
+
+image::create network list-2.png[width=1000]
+
+* Add the External Network IP (use CIDR) or FQDN (multiple entries can be added) +
+
+image::create network list-3.png[width=1000]
+
+* Review the associate tags: +
+
+image::create network list-4.png[width=1000]
+
+Another way to create an External Network is directly in the flow logs page.
+
+For flows that have a source or destination classified as "somewhere" an additional button, called "Flow Analysis" becomes available under "Action"
+
+image::flow_logs_create_external networks.png[width=1000]
+
+Clicking on this button will expand a view that allows you to create an External Network. +
+
+image::flow_logs_create_external_network_suggestion.png[width=400]
+
+[IMPORTANT]
+====
+Enforcers will suggest the FQDN of the External Network if there's a DNS Lookup result associated with that IP
+====

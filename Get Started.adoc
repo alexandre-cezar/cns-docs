@@ -1,0 +1,16 @@
+= Prisma Cloud Identity Based Microsegmentation
+Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 1, 2022:
+
+== Get Started
+To quickly get started, complete the following tasks. +
+
+* Create namespaces +
+* Install the Enforcer +
+
+If you want to also quickly apply microsegmentation to an application, follow these additional steps: +
+
+* https://xxx[Monitor Network traffic]
+* https://xxx[Create External Networks]
+* Create Rulesets using:
+  - https://xxx[Out of Box Rules]
+  - https://xxx[Application Profiling]

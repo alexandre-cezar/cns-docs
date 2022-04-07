@@ -1,0 +1,17 @@
+= Prisma Cloud Identity Based Microsegmentation
+Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 1, 2022:
+
+== About
+
+Prisma Cloud Identity-Based Microsegmentation is designed to work in a zero-trust model where all communications are authenticated and authorized with a cryptographically-signed identity. Every one of your workloads has such an identity to protect them against attacks. All connections are also logged (Zero Trust requirement)
+
+Using Prisma Cloud Identity-Based Microsegmentation, you don’t need to rely on unmanageable, error-prone policies based on IP addresses or relaxed controls that may add gaps into your network security posture. It implements a least privilege network model for your environment, regardless of where your application is running.
+
+Enforcing a distributed, homogeneous security policy per workload independent of network or infrastructure configuration, you enable uniform security orchestration across multi-cloud and traditional Datacenter environments.
+
+=== Additional Information
+
+==== https://xxx[Concepts]
+==== https://xxx[Get Started]
+==== https://xxx[System Requirements]
+==== https://xxx[Planning a Microsegmentation Deployment]

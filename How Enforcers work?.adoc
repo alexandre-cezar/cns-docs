@@ -1,0 +1,87 @@
+= Enforcer architecture
+Alexandre Cezar <acezar@paloaltonetworks.com>, April 4, 2022:
+
+Customers often ask how Prisma Cloud Enforcer really works under the hood.
+
+Enforcers leverage native OS capabilities to monitor the protected workload (Host OS and/or a container/pod). Enforcers don't operate in the OS kernel level and do not introduce kernel modifications of any kind.
+
+== Why not a kernel module?
+Kernel modules are compiled software components that can be inserted into the kernel at runtime and typically provide enhanced capabilities for low level functionality like process monitoring or low level packet inspection. Because they run as part of the kernel, these components are very powerful and privileged. This allows them to perform a wide range of functions but also greatly increases the operational and security risks on a given system. +
+
+The official kernel itself is extensively tested across broad use cases, while these modules are often created by individual companies with far fewer resources and far more narrow test coverage. +
+
+Because kernel modules have unrestricted system access, a security flaw in them is a system wide exposure. A single unchecked buffer or other error in such a low level component can lead to the complete compromise of an otherwise well-designed and hardened system. Further, custom kernel modules can introduce significant stability risks to a system. +
+
+For these reasons, many modern operating systems designed for cloud native apps, like Google Container-Optimized OS, explicitly prevent the usage of kernel modules.
+
+=== Enforcer tasks
+Enforcers, once deployed in a Host, perform 4 key steps: +
+
+* Register itself into the Prisma Cloud backend and gets an Enforcer certificate. Backend activates the Enforcer.
+
+* Defines a nfqueue for the traffic to be processed.
+
+* Generate a Cryptographic Identity for the Host OS and all containers/pods in that host
+
+* Authenticates/Authorizes/Report new sessions
+
+Let's dive in into these steps in more details:
+
+== Enforcer Registering/Activation
+Enforcers are always installed on specific Microsegmentation namespaces. +
+Once installed, Enforcers use mtLS to establish a connection with the console and register themselves on that namespace.
+Once registered and activated, the console issues an Enforcer certificate (EC DSA 256bit) that authenticates the Enforcer on every operation it does.
+
+== nfqueue insertion
+
+== Cryptographic Identity Generation
+Enforcers use a set of information to generate a cryptographic identity for a processing unit.
+
+Depending on the processing unit, Enforcers use information from: +
+
+* "Organizational" tags (derived from the Prisma Cloud namespace where the Enforcer is registered)
+* Cloud Service Provider metadata
+* Operational System information
+* Docker container runtime information
+* Kubernetes labels and metadata
+* User provided information at installation time (Enforcer tags)
+
+To generate a processing unit identity, Enforcers generate ephemeral EC DSA key pairs that are signed by the Prisma Cloud Microsegmentation backend. +
+These keys are then used to generate further additional ephemeral keys (ECDSA using NIST P-256 curve with SHA-256) that only have a 5 min lifespan.
+
+[IMPORTANT]
+====
+The Enforcer and Processing Units keys are never stored in disk. An Enforcer restart will generate new Enforcer and Processing Unit keys
+====
+
+=== Session Authentication/Authorization
+All sessions that originate from a workload that is protected by an Enforcer will carry the cryptographic identity - as long as the destination is also protected by an Enforcer. +
+This ensures that all sessions are mutually authenticated. Additional nonces are used to prevent MITM and replay attacks.
+
+For authorization, Enforcers will evaluate any existing rulesets to allow or reject traffic.
+If no explicit ruleset matches the session, then the Implicit Namespace rule (allow or reject) will be used.
+
+Changes on rulesets also affects established sessions and a previously allowed flow can be rejected if an existing ruleset is updated or a new ruleset is introduced. +
+This capability is called "policy rematch".
+
+=== How flow authentication works?
+
+==== TCP flows
+For TCP flows, the client provides its identity to the server on the SYN packet, and the server allows/denies the flow based on its programmed ingress rulesets. +
+If the server allows the connection, it sends its own identity back to the client on the SYNACK packet. +
+If the client allows the connection based on its programmed egress rulesets, then the connection is being established, otherwise the connection establishment fails.
+
+This differs for flows to "external networks". If the destination (or the source) is an external network, then the decision for allowing/denying a flow is naturally not being made with cryptographic identity, but solely based on the source/destination networks as defined in the external networks.
+
+==== UDP flows
+UDP flows are by default not authenticated, by default. +
+This feature can be activated by configuring the "UDP target networks" in the Enforcer profile.
+The implementation is performing a custom 4-way handshake to authenticate connections. Additionally, it is making use of UDP options to send the cryptographic identity to prevent the identity data from ever being received by applications. UDP options are only an RFC draft though and are not supported by all cloud providers.
+
+[IMPORTANT]
+====
+Enforcers never perform UDP authentication for DNS traffic.
+====
+
+==== Are ICMP flows authenticated as well?
+ICMP flows are not authenticated, but they are authorized through rulesets. In the ICMP case, there's no identity, so ICMP policies only consider ips or fqdns.
