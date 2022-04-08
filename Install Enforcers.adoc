@@ -41,7 +41,7 @@ image::images/install_enforcer-4.png[width=500]
 
 * Step 3 (optional) - If you want to add custom tags to your Enforcer in order to leverage them in rulesets, add them under tags.
 
-image::images/install_enforcer-2.png[width=400]
+image::images/install_enforcer-2.png[width=300]
 
 * Step 4 - Copy the resulting installation script and use it to install the Enforcer on your workload.
 
@@ -59,29 +59,29 @@ For Enforcers to be able to use Cloud Auto-Registration, please follow the steps
 
 * Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the "+" button and select "Create a Cloud Registration policy".
 
-image::images/cloud-registration-1.png[width=500]
+image::images/cloud-registration-1.png[width=550]
 
 * Step 3 - Under Auto-registration, selects AWS as the cloud provider and under _Claims_, add the string _account=<your AWS account id>_ and finish creating the Auto-Registration policy.
 
-image::images/cloud-registration-2.png[width=400]
+image::images/cloud-registration-2.png[width=350]
 
 ==== Azure
 * Step 1 - Obtain your Azure subscription ID or Tenant ID
 
 * Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the "+" button and select "Create a Cloud Registration policy".
 
-image::images/cloud-registration-1.png[width=500]
+image::images/cloud-registration-1.png[width=550]
 
 * Step 3 - Under Auto-registration, selects Azure as the cloud provider and under _Claims_, add the string _subscriptions=<your Azure subscription>_ or _tenantid=<your Azure tenant id>_ and finish creating the Auto-Registration policy.
 
-image::images/cloud-registration-3.png[width=400]
+image::images/cloud-registration-3.png[width=450]
 
 ==== GCP
 * Step 1 - Obtain your GCP project ID
 
 * Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the "+" button and select "Create a Cloud Registration policy".
 
-image::images/cloud-registration-1.png[width=500]
+image::images/cloud-registration-1.png[width=550]
 
 * Step 3 - Under Auto-registration, selects GCP as the cloud provider and under _Claims_, add the string _projectid=<your GCP project ID>_ and finish creating the Auto-Registration policy.
 
