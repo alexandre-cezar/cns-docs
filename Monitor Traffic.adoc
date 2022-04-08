@@ -7,7 +7,7 @@ With this approach, it becomes easier for security teams to define alarms for gu
 
 A practical example is an application that is made of 4 layers (frontend, api-gw, backend and database). +
 
-image::images/Sample App diagram.jpeg[width=150,align="center"]
+image::images/Sample App diagram.jpeg[width=150, align="center"]
 
 Let's dig into this application flows for a moment.
 
@@ -50,7 +50,7 @@ Next step is to start creating https://xxx[External networks] and defining rules
 You can also use _policy as code_ to automate the policy creation through CI/CD pipelines.
 ====
 
-After creating the required external networks and rulesets, your application flow should be similar to this:
+After creating the required external networks and rulesets and modifying the Namespace Implicit Default Action to Reject, your application flow should be similar to this:
 
 image::images/monitor_flows_after.png[width=1000]
 
