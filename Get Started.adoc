@@ -5,7 +5,7 @@ Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 1, 2022:
 To quickly get started, complete the following tasks. +
 
 * https://github.com/alexandre-cezar/cns-docs/blob/main/Create%20Namespaces.adoc[Create namespaces] +
-* Install the Enforcer +
+* https://github.com/alexandre-cezar/cns-docs/blob/main/Install%20Enforcers.adoc[Install the Enforcer] +
 
 If you want to also quickly apply microsegmentation to an application, follow these additional steps: +
 
