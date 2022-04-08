@@ -45,4 +45,4 @@ Step 3 - Define the Namespace Name
 
 Step 4 - Select the Implicit Default Action (_we recommend you define it as Inherit as it will receive the Implicit action from the parent namespace_)
 
-Step 5 - Leave Organizational Tags and Additional Tag Prefixes as-is (_unless explicitly instructed otherwise by a Prisma Cloud specialist_)
+Step 5 - Leave Organizational Tags and Additional Tag Prefixes as-is (_unless explicitly instructed otherwise by a Prisma Cloud specialist_) 
