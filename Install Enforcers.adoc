@@ -172,8 +172,11 @@ Make sure the AKS cluster is running the Azure CNI
 ===== Tanzu Kubernetes Grid
 ===== Standard Kubernetes
 === Using Enforcer tags
+Enforcer tags are used when you want to create tags for the Enforcer itself. They are resourceful on environments where security administrators have no permissions to create/modify existing workload tags. +
+In such cases, administrators can use Enforcer tags as a way to use custom tags on rulesets.
+
 === Install the api-server (k8s CRD operator)
-==== Enabling the API Server during installation
+
 === Advanced Options
 ==== Host Mode
 ==== Using a non-transparent proxy to connect to the console
