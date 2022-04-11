@@ -49,6 +49,8 @@ Depending on the processing unit, Enforcers use information from: +
 To generate a processing unit identity, Enforcers generate ephemeral EC DSA key pairs that are signed by the Prisma Cloud Microsegmentation backend. +
 These keys are then used to generate further additional ephemeral keys (ECDSA using NIST P-256 curve with SHA-256) that only have a 5 min lifespan.
 
+For Cloud instances, Enforcers will check for updates in metadata every 60 seconds.
+
 [IMPORTANT]
 ====
 The Enforcer and Processing Units keys are never stored in disk. An Enforcer restart will generate new Enforcer and Processing Unit keys

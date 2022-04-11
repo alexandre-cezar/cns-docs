@@ -21,15 +21,15 @@ The steps below cover the Enforcer installation in such environments. +
 
 * Step 2 - Select Single Enforcer, Platform Type is Linux and under Registration, select Standard.
 
-image::images/install_enforcer-1.png[width=500]
+image::images/install_enforcer-1.png[width=500,align="center"]
 
 * Step 3 (optional) - If you want to add custom tags to your Enforcer in order to leverage them in rulesets, add them under tags.
 
-image::images/install_enforcer-2.png[width=300]
+image::images/install_enforcer-2.png[width=300,align="center"]
 
 * Step 4 - Copy the resulting installation script and use it to install the Enforcer on your workload.
 
-image::images/install_enforcer-3.png[width=400]
+image::images/install_enforcer-3.png[width=400,align="center"]
 
 ==== Windows Servers and Clients
 
@@ -37,15 +37,15 @@ image::images/install_enforcer-3.png[width=400]
 
 * Step 2 - Select Single Enforcer, Platform Type is Windows and under Registration, select Standard.
 
-image::images/install_enforcer-4.png[width=500]
+image::images/install_enforcer-4.png[width=500,align="center"]
 
 * Step 3 (optional) - If you want to add custom tags to your Enforcer in order to leverage them in rulesets, add them under tags.
 
-image::images/install_enforcer-2.png[width=300]
+image::images/install_enforcer-2.png[width=300,align="center"]
 
 * Step 4 - Copy the resulting installation script and use it to install the Enforcer on your workload.
 
-image::images/install_enforcer-5.png[width=400]
+image::images/install_enforcer-5.png[width=400,align="center"]
 
 === Understanding Cloud Auto-Registration
 The difference between an Enforcer deployed on-prem and an Enforcer deployed on a public cloud is the registration method. +
@@ -57,35 +57,35 @@ For Enforcers to be able to use Cloud Auto-Registration, please follow the steps
 ==== AWS
 * Step 1 - Obtain your AWS cloud account number
 
-* Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the "+" button and select "Create a Cloud Registration policy".
+* Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the Authorizations tab, click on the "+" button and select "Create a Cloud Registration policy".
 
-image::images/cloud-registration-1.png[width=550]
+image::images/cloud-registration-1.png[width=550,align="center"]
 
 * Step 3 - Under Auto-registration, selects AWS as the cloud provider and under _Claims_, add the string _account=<your AWS account id>_ and finish creating the Auto-Registration policy.
 
-image::images/cloud-registration-2.png[width=350]
+image::images/cloud-registration-2.png[width=350,align="center"]
 
 ==== Azure
 * Step 1 - Obtain your Azure subscription ID or Tenant ID
 
-* Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the "+" button and select "Create a Cloud Registration policy".
+* Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the Authorizations tab, click on the "+" button and select "Create a Cloud Registration policy".
 
-image::images/cloud-registration-1.png[width=550]
+image::images/cloud-registration-1.png[width=550,align="center"]
 
 * Step 3 - Under Auto-registration, selects Azure as the cloud provider and under _Claims_, add the string _subscriptions=<your Azure subscription>_ or _tenantid=<your Azure tenant id>_ and finish creating the Auto-Registration policy.
 
-image::images/cloud-registration-3.png[width=450]
+image::images/cloud-registration-3.png[width=450,align="center"]
 
 ==== GCP
 * Step 1 - Obtain your GCP project ID
 
-* Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the "+" button and select "Create a Cloud Registration policy".
+* Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the Authorizations tab, click on the "+" button and select "Create a Cloud Registration policy".
 
-image::images/cloud-registration-1.png[width=550]
+image::images/cloud-registration-1.png[width=550,align="center"]
 
 * Step 3 - Under Auto-registration, selects GCP as the cloud provider and under _Claims_, add the string _projectid=<your GCP project ID>_ and finish creating the Auto-Registration policy.
 
-image::images/cloud-registration-4.png[width=400]
+image::images/cloud-registration-4.png[width=400,align="center"]
 
 [NOTE]
 Cloud Auto Registration is available on AWS, Azure and GCP. For other public cloud providers, use the Standard installation method.
@@ -116,11 +116,11 @@ The steps below cover the Enforcer installation in such environments. +
 
 * Step 2 - Select Single Enforcer, Platform Type is Linux and under Registration, select Cloud AutoRegistration.
 
-image::images/install_enforcer-6.png[width=500]
+image::images/install_enforcer-6.png[width=500,align="center"]
 
 * Step 3 - Copy the resulting installation script and use it to install the Enforcer on your workload.
 
-image::images/install_enforcer-7.png[width=300]
+image::images/install_enforcer-7.png[width=300,align="center"]
 
 ==== Windows
 
@@ -128,11 +128,11 @@ image::images/install_enforcer-7.png[width=300]
 
 * Step 2 - Select Single Enforcer, Platform Type is Windows and under Registration, select Cloud AutoRegistration.
 
-image::images/install_enforcer-9.png[width=500]
+image::images/install_enforcer-9.png[width=500,align="center"]
 
 * Step 3 - Copy the resulting installation script and use it to install the Enforcer on your workload.
 
-image::images/install_enforcer-10.png[width=300]
+image::images/install_enforcer-10.png[width=300,align="center"]
 
 ==== Kubernetes
 Microsegmentation provides a close integration with Kubernetes and OpenShift to make it easy to control and monitor clusters composed of Linux hosts. +
@@ -147,11 +147,13 @@ apoctl, yaml or helm charts
 
 * Step 2 - Select Daemonset and under ClusterType, select AKS. Select the CLI Tool Version (the Host OS where the deployment will be executed) and your preferred Installation Mode.
 
-image::images/enforcer-aks-1.png[width=500]
+image::images/enforcer-aks-1.png[width=500,align="center"]
 
 * Step 3 - Copy the resulting installation script and use it to install the Enforcer on your AKS cluster.
 
-image::images/enforcer-aks-2.png[width=300]
+* Step 4 [yaml only] - The resulting script will generate two files.
+
+image::images/enforcer-aks-2.png[width=300,align="center"]
 
 [NOTE]
 Make sure the AKS cluster is running the Azure CNI

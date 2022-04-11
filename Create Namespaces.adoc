@@ -17,7 +17,7 @@ Make sure that you are on the root (tenant level namespace)
 
 Step 2 - Click on the "+" sign button to create a new cloud account level namespace.
 
-image::images/create_namespace_cloudaccount-1.png[width=600]
+image::images/create_namespace_cloudaccount-1.png[width=600,align="center"]
 
 Step 3 - Define the Namespace Name
 
@@ -39,7 +39,7 @@ Make sure that you are on the proper cloud-account namespace
 
 Step 2 - Click on the "+" sign button to create a new group level namespace.
 
-image::images/create_namespace_group-1.png[width=600]
+image::images/create_namespace_group-1.png[width=600,align="center"]
 
 Step 3 - Define the Namespace Name
 

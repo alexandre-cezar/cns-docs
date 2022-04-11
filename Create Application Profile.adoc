@@ -16,11 +16,11 @@ The flow tupple is Source (PaaS Load Balancer) → Destination (front-end) proce
 
 If you have not created an external network for this Load Balancer, then App Profiling will observe the flow as <Source IP address> → (front-end) PU and ignore it as shown here:
 
-image::images/application_profiling_3.png[width=500]
+image::images/application_profiling_3.png[width=500,align="center"]
 
 If there’s a previously created external network that matches the Load Balancer IP address or FQDN, then App Profiling will observe the flow from <external network> → (front-end) PU and it will profile it as shown below:
 
-image::images/application_profiling_4.png[width=500]
+image::images/application_profiling_4.png[width=500,align="center"]
 
 [NOTE]
 Application Profiling leverages only organizational and custom tags to suggest rulesets. +
@@ -39,7 +39,7 @@ Application Profiling is not available at the tenant or cloud account level name
 
 * Step 2 - Define the period for which you want to observe the traffic and select Profile My Application.
 
-image::images/application_profiling_5.png[width=500]
+image::images/application_profiling_5.png[width=500,align="center"]
 
 * Step 3 - Review the suggested rulesets. +
 
@@ -47,13 +47,13 @@ You can expand the details of a ruleset and look at the rule details. The number
 
 To visualize the specific flows that pertain to a ruleset, click the eye icon to the upper right of each ruleset.
 
-image::images/application_profiling_6.png[width=500]
+image::images/application_profiling_6.png[width=500,align="center"]
 
 Application Profiling will always suggest policies based on the flow direction and create rulesets per processing unit.
 
 Example, if client PU only sends traffic to server PU, Application Profiling will suggest 2 rulesets.
 
-image::images/application_profiling_7.png[width=500]
+image::images/application_profiling_7.png[width=500,align="center"]
 
 In the image above, we can verify that Application Profiling suggested 2 rulesets for the related flow
 
@@ -65,5 +65,3 @@ In the image above, we can verify that Application Profiling suggested 2 ruleset
 
 [NOTE]
 The reason why Application Profiling suggests 2 policies for the example above, is because policies need to be applied at both client and server Enforcers.
-
-

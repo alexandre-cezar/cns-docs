@@ -11,7 +11,7 @@ You can review a brief description for the rule.
 
 For example, select the Infrastructure ruleset to view the available rules within that ruleset, select Create DNS Rule and Activate it.
 
-image::images/out_of_box_rules_1.png[width=500]
+image::images/out_of_box_rules_1.png[width=500,align="center"]
 
 [IMPORTANT]
 Intra-namespace policies are only available on specific namespaces. +
@@ -38,7 +38,7 @@ When you activate an OOB rule, you must use a previously created ruleset templat
 * Step 2 - Select the rule to Clone. +
 Use the duplicate icon and modify it to meet your requirements.
 
-image::images/out_of_box_rules_2.png[width=500]
+image::images/out_of_box_rules_2.png[width=500,align="center"]
 
 *Removing Out Of The Box Rules*
 
@@ -48,7 +48,7 @@ If you are removing an OOB, take in account that the traffic previously allowed 
 * Step 2 - Select the namespace.
 * Step 3 - Select the rule to Remove.
 
-image::images/out_of_box_rules_3.png[width=500]
+image::images/out_of_box_rules_3.png[width=500,align="center"]
 
 *Automating Out Of The Box Rules*
 
