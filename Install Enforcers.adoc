@@ -151,9 +151,17 @@ image::images/enforcer-aks-1.png[width=500,align="center"]
 
 * Step 3 - Copy the resulting installation script and use it to install the Enforcer on your AKS cluster.
 
-* Step 4 [yaml only] - The resulting script will generate two files.
-
 image::images/enforcer-aks-2.png[width=300,align="center"]
+
+* Step 4 [yaml only] - The resulting script will generate two files. +
+- enforcerd-<version>.yaml - Enforcer deployment file
+- namespace-secret-<version>.yaml - Enforcer credential. +
+
+Install the namespace-secret file first, then move to deploy the Enforcer, by running the command _kubectl apply -f <yaml file name>_
+
+After the installation is done, you can visualize the Enforcer pods by running the command _kubectl get pods -n aporeto_
+
+image::images/install-enforcer-11.png[width=350,align="center"]
 
 [NOTE]
 Make sure the AKS cluster is running the Azure CNI
