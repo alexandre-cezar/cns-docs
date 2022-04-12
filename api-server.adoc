@@ -93,23 +93,23 @@ Follow these steps to create a network ruleset to allo PU to PU communication fr
 
 * Step 1 - Apply the _frontend-to-backend-outgoing.yaml_ file on the test-frontend namespace using the command `kubectl apply -f  frontend-to-backend-outgoing.yaml -n test-frontend`
 
-The yaml file used in this example is located https://xxx[here]
+The yaml file used in this example is located https://github.com/alexandre-cezar/cns-docs/blob/main/frontend-to-backend-outgoing.yaml[here]
 
 * Step 2 - Apply the _backend-from-frontend-incoming.yaml_ file on the test-backend namespace using the command `kubectl apply -f  backend-from-frontend-incoming.yaml -n test-backend`
 
-The yaml file used in this example is located https://xxx[here]
+The yaml file used in this example is located https://github.com/alexandre-cezar/cns-docs/blob/main/backend-from-frontend-incoming.yaml[here]
 
 [NOTE]
 For the example above, we've assumed that both namespaces were already created on the cluster and synced with the micro-segmentation console and that all the tags used in the network rulesets were already defined in the tag prefixes.
 
 === YAML file examples
 
-https://xxx[clusterenforcerprofile]
+https://github.com/alexandre-cezar/cns-docs/blob/main/clusterenforcerprofile.yaml[clusterenforcerprofile]
 
-https://xxx[clusterexternalnetwork]
+https://github.com/alexandre-cezar/cns-docs/blob/main/clusterexternalnetwork.yaml[clusterexternalnetwork]
 
-https://xxx[clusternetworkrulesetpolicy]
+https://github.com/alexandre-cezar/cns-docs/blob/main/clusternetworkrulesetpolicy.yaml[clusternetworkrulesetpolicy]
 
-https://xxx[externalnetwork]
+https://github.com/alexandre-cezar/cns-docs/blob/main/externalnetwork.yaml[externalnetwork]
 
-https://xxx[networkrulesetpolicy]
+https://github.com/alexandre-cezar/cns-docs/blob/main/networkrulesetpolicy.yaml[networkrulesetpolicy]
