@@ -200,7 +200,7 @@ Alternatively, you can enable host mode directly in the Prisma Cloud administrat
 
 image::images/enable-host-mode.png[width=500,align="center"]
 
-For additional information on how use the api-server to manage microsegmentation objects in K8s, please read this https://xxx[document].
+For additional information on how use the api-server to manage microsegmentation objects in K8s, please read this https://github.com/alexandre-cezar/cns-docs/blob/main/Host-Mode.adoc[document].
 
 ==== Using a non-transparent proxy to connect to the console
 Enforcers require access to Prisma Cloud in order to send telemetry data and receive updates and in some environments this can only be achieved through a  non-transparent proxy.
