@@ -1,0 +1,16 @@
+apiVersion: network.prismacloud.io/v1
+kind: ClusterNetworkRuleSetPolicy
+metadata:
+  name: network-ruleset-policy
+spec:
+  description: "a network ruleset policy created from aggregated-apiserver"
+  outgoingRules:
+    - action: Allow
+      logsDisabled: false
+      object:
+        - - externalnetwork:name=cluster-external-network
+      observationEnabled: false
+      protocolPorts:
+        - tcp/80
+  subject:
+    - - $identity=processingunit

@@ -1,0 +1,10 @@
+apiVersion: network.prismacloud.io/v1
+kind: ExternalNetwork
+metadata:
+  name: external-network
+spec:
+  protected: true
+  name: "external-network"
+  description: "an external network for google.com"
+  entries:
+    [google.com, *.google.com]

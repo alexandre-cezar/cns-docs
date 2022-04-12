@@ -1,0 +1,15 @@
+  clusterenforcerprofile.yaml
+
+  apiVersion: network.prismacloud.io/v1
+  kind: ClusterEnforcerProfile
+  metadata:
+    name: cluster-enforcer-profile
+  spec:
+    description: "an enforcer profile created from aggregated-apiserver"
+    targetNetworks:
+      - 10.0.0.0/8
+      - 100.64.0.0/10
+      - 127.0.0.0/8
+      - 172.16.0.0/12
+      - 192.168.0.0/16
+      - 198.18.0.0/15

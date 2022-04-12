@@ -1,0 +1,37 @@
+kind: NetworkRuleSetPolicy
+
+metadata:
+
+  name: frontend-to-backend-outgoing
+
+spec:
+
+  description: "Allow outgoing communication from test-frontend to test-backend namespace"
+
+  outgoingRules:
+
+    - action: Allow
+
+      logsDisabled: false
+
+      object:
+
+        - - '@org:kubernetes=test-backend'
+
+          - $identity=processingunit
+
+          - k8s:app=backend
+
+      observationEnabled: false
+
+      protocolPorts:
+
+        - tcp/443
+
+  subject:
+
+    - - $identity=processingunit
+
+      - '@org:kubernetes=test-frontend'
+
+      - k8s:app=frontend

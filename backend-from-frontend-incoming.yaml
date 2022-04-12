@@ -1,0 +1,20 @@
+apiVersion: network.prismacloud.io/v1
+kind: NetworkRuleSetPolicy
+metadata:
+  name: backend-from-frontend-incoming
+spec:
+  description: "Allow incoming communication from test-frontend to test-backend namespace"
+  incomingRules:
+    - action: Allow
+      logsDisabled: false
+      object:
+        - - $identity=processingunit
+          - '@org:kubernetes=test-frontend'
+          - k8s:app=frontend
+      observationEnabled: false
+      protocolPorts:
+        - any
+  subject:
+    - - $identity=processingunit
+      - '@org:kubernetes=test-backend'
+      - k8s:app=backend

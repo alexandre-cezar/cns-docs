@@ -54,7 +54,7 @@ On-prem Enforcers uses a short-lived Microsegmentation token, while cloud resour
 
 For Enforcers to be able to use Cloud Auto-Registration, please follow the steps below:
 
-==== AWS
+==== Create Auto-Registration for AWS accounts
 * Step 1 - Obtain your AWS cloud account number
 
 * Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the Authorizations tab, click on the "+" button and select "Create a Cloud Registration policy".
@@ -65,7 +65,7 @@ image::images/cloud-registration-1.png[width=550,align="center"]
 
 image::images/cloud-registration-2.png[width=350,align="center"]
 
-==== Azure
+==== Create Auto-Registration for Azure subscriptions
 * Step 1 - Obtain your Azure subscription ID or Tenant ID
 
 * Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the Authorizations tab, click on the "+" button and select "Create a Cloud Registration policy".
@@ -76,7 +76,7 @@ image::images/cloud-registration-1.png[width=550,align="center"]
 
 image::images/cloud-registration-3.png[width=450,align="center"]
 
-==== GCP
+==== Create Auto-Registration for GCP projects
 * Step 1 - Obtain your GCP project ID
 
 * Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the Authorizations tab, click on the "+" button and select "Create a Cloud Registration policy".
@@ -141,8 +141,7 @@ You can use either of the following methods to deploy the enforcer DaemonSet. +
 
 apoctl, yaml or helm charts
 
-===== AKS
-
+===== Install Enforcers on AKS clusters
 * Step 1 - Navigate to the group Namespace where you want to deploy the Enforcer and once there, click on the Agent/Deploy page. +
 
 * Step 2 - Select Daemonset and under ClusterType, select AKS. Select the CLI Tool Version (the Host OS where the deployment will be executed) and your preferred Installation Mode.
@@ -163,14 +162,14 @@ After the installation is done, you can visualize the Enforcer pods by running t
 
 image::images/install-enforcer-11.png[width=350,align="center"]
 
-[NOTE]
+[WARNING]
 Make sure the AKS cluster is running the Azure CNI
 
-===== EKS
-===== GKE
-===== Openshift
-===== Tanzu Kubernetes Grid
-===== Standard Kubernetes
+===== Install Enforcers on EKS clusters
+===== Install Enforcers on GKE clusters
+===== Install Enforcers on Openshift clusters
+===== Install Enforcers on Tanzu Kubernetes Grid
+===== Install Enforcers on Standard Kubernetes
 
 === Using Enforcer tags
 Enforcer tags are used when you want to create tags for the Enforcer itself. They are resourceful on environments where security administrators have no permissions to create/modify existing workload tags. +
@@ -195,7 +194,6 @@ When Host mode is enabled, the Enforcer protects your Kubernetes pods, container
 
 [IMPORTANT]
 You can only change the protection mode when installing the Enforcer. To change the protection mode from container to host mode, you need to reinstall the Enforcer.
-
 
 To enable host mode, you must use the _--raw-flags=--enable-host-mode_ advanced configuration option when installing the Enforcer. +
 Alternatively, you can enable host mode directly in the Prisma Cloud administrative console.

@@ -1,0 +1,12 @@
+  clusterexternalnetwork.yaml
+
+  apiVersion: network.prismacloud.io/v1
+  kind: ClusterExternalNetwork
+  metadata:
+    name: cluster-external-network
+  spec:
+    protected: true
+    name: "cluster-external-network"
+    description: "an external network for google.com"
+    entries:
+      [google.com, *.google.com]
