@@ -179,11 +179,11 @@ Add them under the tags section during an Enforcer installation.
 image::images/install_enforcer-2.png[width=300,align="center"]
 
 === Install the api-server (k8s CRD operator)
-To install the api-server, add the _--install-aggregated-apiserver_ flag as an argument during a K8s Enforcer installation.
+To install the api-server, add the `--install-aggregated-apiserver` flag as an argument during a K8s Enforcer installation.
 
 image::images/api-server-install.png[width=500,align="center"]
 
-For additional information on how use the api-server to manage microsegmentation objects in K8s, please read this https://xxx[document].
+For additional information on how use the api-server to manage microsegmentation objects in K8s, please read this https://github.com/alexandre-cezar/cns-docs/blob/main/api-server.adoc[document].
 
 === Advanced Options
 There are several aspects of an Enforcer configuration that are controlled by using advanced flags during an Enforcer install.
@@ -195,15 +195,15 @@ When Host mode is enabled, the Enforcer protects your Kubernetes pods, container
 [IMPORTANT]
 You can only change the protection mode when installing the Enforcer. To change the protection mode from container to host mode, you need to reinstall the Enforcer.
 
-To enable host mode, you must use the _--raw-flags=--enable-host-mode_ advanced configuration option when installing the Enforcer. +
+To enable host mode, you must use the `--raw-flags --enable-host-mode` advanced configuration option when installing the Enforcer. +
 Alternatively, you can enable host mode directly in the Prisma Cloud administrative console.
 
 image::images/enable-host-mode.png[width=500,align="center"]
 
 For additional information on how use the api-server to manage microsegmentation objects in K8s, please read this https://github.com/alexandre-cezar/cns-docs/blob/main/Host-Mode.adoc[document].
 
-==== Using a non-transparent proxy to connect to the console
-Enforcers require access to Prisma Cloud in order to send telemetry data and receive updates and in some environments this can only be achieved through a  non-transparent proxy.
+==== Enable non-transparent proxy support
+Enforcers require access to Prisma Cloud in order to send telemetry data and receive updates and in some environments this can only be achieved through a non-transparent proxy.
 
 Enforcers support adding a proxy endpoint during install, in order to support such use cases.
 
@@ -221,8 +221,15 @@ During the Enforcer installation, expand the Advanced option and add the proxy i
 image::images/configure-proxy.png[width=500,align="center"]
 
 ==== Enable ipv6
+By default,Enforcers ignore IPv6 traffic. +
+If you have IPv6 in your environment and wish to monitor and control these connections, use the `--raw-flags --enable-ipv6` flag during installation.
+
 ==== Token expiration
-==== Install without activation
-==== Output script
+You can control for how long you want the Microsegmentation token to be valid during an Enforcer install. The default is _30 minutes_, but if you want the value to be lower, you can adjust it for _10 minutes_ or if you need the token to be higher, you can adjust it for _1 hour_
+
+==== Install without activation (Host only)
+==== Output script (Host only)
 ==== IP Constraint
+==== Cloud Probes timeout
+The Enforcer can determine if it is running in a cloud environment, such as AWS, GCP, or Azure. Use the `--cloud-probe-timeout` to configure the amount of time to wait for these internal probes to complete during installation. Default is two seconds.
 
