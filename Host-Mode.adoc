@@ -9,7 +9,7 @@ When protecting K8s clusters, the Enforcer supports the following protection mod
 In the default container mode, the Enforcer protects your Kubernetes pods and containers, but not your nodes.
 When Host Mode is enabled, the Enforcer protects your Kubernetes pods, containers, and nodes.
 
-If you want to enable Host Mode, please read this https://xxx[document]
+If you want to enable Host Mode, please follow this https://github.com/alexandre-cezar/cns-docs/blob/main/Install%20Enforcers.adoc#host-mode[guide]
 
 [IMPORTANT]
 Using Host Mode requires proper planning since the administrators need to account for all the required node traffic. +
