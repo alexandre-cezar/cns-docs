@@ -3,14 +3,13 @@ Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 7, 2022:
 
 Once you have installed Microsegmentation, the topics in this section walk you through set up tasks.
 
-# Contents
-* Namespaces
-* Enforcers
-* External Networks
-* Rulesets
+* [Namespaces]
+* [Enforcers]
+* [External Networks]
+* [Rulesets]
 * [Out of the box Rules](https://github.com/alexandre-cezar/cns-docs/blob/main/Host-Mode.adoc)
 * [Application Profiling](https://github.com/alexandre-cezar/cns-docs/blob/main/Application%20Profiling.adoc)
 * [Host Mode](https://github.com/alexandre-cezar/cns-docs/blob/main/Host-Mode.adoc)
 * [api-server](https://github.com/alexandre-cezar/cns-docs/blob/main/api-server.adoc)
-* App Credentials
-* Alerts & Automations
+* [App Credentials]
+* [Alerts & Automations]
