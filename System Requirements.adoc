@@ -126,6 +126,9 @@ To deploy the Enforcer on GKE, you must have Kubernetes Engine Admin permissions
 Enforcers ignore Fargate and other serverless workloads in EKS.
 ====
 
+*Host Mode* +
+Enforcers support Host Mode for EKS and GKE
+
 *Supported Linux Distributions* +
 You can deploy the Enforcer on the following supported distributions.
 

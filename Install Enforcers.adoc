@@ -171,15 +171,57 @@ Make sure the AKS cluster is running the Azure CNI
 ===== Openshift
 ===== Tanzu Kubernetes Grid
 ===== Standard Kubernetes
+
 === Using Enforcer tags
 Enforcer tags are used when you want to create tags for the Enforcer itself. They are resourceful on environments where security administrators have no permissions to create/modify existing workload tags. +
 In such cases, administrators can use Enforcer tags as a way to use custom tags on rulesets.
+Add them under the tags section during an Enforcer installation.
+
+image::images/install_enforcer-2.png[width=300,align="center"]
 
 === Install the api-server (k8s CRD operator)
+To install the api-server, add the _--install-aggregated-apiserver_ flag as an argument during a K8s Enforcer installation.
+
+image::images/api-server-install.png[width=500,align="center"]
+
+For additional information on how use the api-server to manage microsegmentation objects in K8s, please read this https://xxx[document].
 
 === Advanced Options
+There are several aspects of an Enforcer configuration that are controlled by using advanced flags during an Enforcer install.
+They're described below +
+
 ==== Host Mode
+When Host mode is enabled, the Enforcer protects your Kubernetes pods, containers and nodes.
+
+[IMPORTANT]
+You can only change the protection mode when installing the Enforcer. To change the protection mode from container to host mode, you need to reinstall the Enforcer.
+
+
+To enable host mode, you must use the _--raw-flags=--enable-host-mode_ advanced configuration option when installing the Enforcer. +
+Alternatively, you can enable host mode directly in the Prisma Cloud administrative console.
+
+image::images/enable-host-mode.png[width=500,align="center"]
+
+For additional information on how use the api-server to manage microsegmentation objects in K8s, please read this https://xxx[document].
+
 ==== Using a non-transparent proxy to connect to the console
+Enforcers require access to Prisma Cloud in order to send telemetry data and receive updates and in some environments this can only be achieved through a  non-transparent proxy.
+
+Enforcers support adding a proxy endpoint during install, in order to support such use cases.
+
+[NOTE]
+TLS terminating proxies are not supported.
+
+During the Enforcer installation, expand the Advanced option and add the proxy information, as follows:
+
+* Proxy Address — IP address or fully qualified domain name (FQDN) of the proxy server, alongside the protocol and port information: example http://proxy.example.com:8080
+
+* Proxy Credential— User and Password credentials for proxies that require authentication (optional)
+
+* Proxy Server CA — When the proxy server requires a private CA certificate to be used during connection (optional). Upload the proxy certificate in .pem file format.
+
+image::images/configure-proxy.png[width=500,align="center"]
+
 ==== Enable ipv6
 ==== Token expiration
 ==== Install without activation

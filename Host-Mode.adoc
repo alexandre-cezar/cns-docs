@@ -1,0 +1,50 @@
+= Host Mode
+Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 12, 2022:
+
+When protecting K8s clusters, the Enforcer supports the following protection modes: +
+
+* Container mode
+* Host mode
+
+In the default container mode, the Enforcer protects your Kubernetes pods and containers, but not your nodes.
+When Host Mode is enabled, the Enforcer protects your Kubernetes pods, containers, and nodes.
+
+If you want to enable Host Mode, please read this https://xxx[document]
+
+[IMPORTANT]
+Using Host Mode requires proper planning since the administrators need to account for all the required node traffic. +
+
+The Host Mode has several default traffic rules to account for node traffic. As a best practice,  plan for the different software versions, services and applications before enabling host mode on production environments, to mitigate any disruption to traffic.
+
+=== Managing System Namespaces
+
+With Host Mode enabled,  the system namespaces of your cluster are microsegmented by default. +
+
+The following namespaces are microsegmented on Host Mode:
+
+* kube-system
+* kube-public
+* kube-node-lease
+
+[NOTE]
+On container mode, the Enforcer doesn’t microsegment any Kubernetes nodes or system namespaces.
+
+The default K8s namespaces use the Allow Action by default, to avoid any service disruption.
+
+[WARNING]
+Changing the default traffic action to Inherit or Reject for system namespaces can leave your cluster in an unusable state. Add and modify network rulesets before changing the default traffic action for system namespaces to account for required network rulesets and to avoid blocking internal system traffic.
+
+=== Additional Information
+
+In Host Mode, the Enforcer option to ignore the pods’ processing units won’t work.
+
+Ignored container PUs will always fallback to the host PU.
+
+To access your Kubernetes resources from a node (Host PU) or a pod that may use the node network namespace, you can’t use the cluster’s IP. Instead use the endpoint’s IP or its FQDN.
+
+In both cases, you see the corresponding IP addresses in the flow reports since the reports are based on the network rulesets the network list.
+
+=== Out of The Box Rules
+All the Host Mode initial set of policies are covered under https://github.com/alexandre-cezar/cns-docs/blob/main/Out%20of%20the%20Box%20Rules.adoc[Out-of-the-Box] rules.
+
+Before enabling the host mode for your Enforcers, review the https://github.com/alexandre-cezar/cns-docs/blob/main/System%20Requirements.adoc[System Requirements] to ensure your platform is supported.
