@@ -108,7 +108,7 @@ image::images/api-authorization03.png[width=500,align="center"]
 image::images/api-authorization04.png[width=500,align="center"]
 
 [TIP]
-For more information about the User Roles, click https://xxx[here]
+For more information about User Roles, click https://xxx[here]
 
 === Cloud Auto-Registration
 Cloud AutoRegistration allows Enforcers deployed on public cloud environments (AWS, Azure, GCP) to authenticate themselves to the Microsegmentation console using cloud provider tokens. +
