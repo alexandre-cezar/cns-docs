@@ -9,7 +9,7 @@ Microsegmentation is a technology that requires proper planning before deploymen
 Following the steps below will ensure a smooth deployment and no impact in existing/new applications enforced.
 
 == Plan and Deploy Phase
-Before starting reading this document, we recommend that you get yourself familiar with the Identity Based Microsegmentation concepts. You can find them https://github.com/alexandre-cezar/cns-docs/blob/main/Concepts.adoc[here]
+Before reading this document, we recommend that you get familiar with the key Identity Based Microsegmentation concepts. You can find them https://github.com/alexandre-cezar/cns-docs/blob/main/Concepts.adoc[here]
 
 === Initial Requirements
 The first consideration is the Prisma Cloud Microsegmentation Console. It serves as both the management interface and the API. CNS administrators will use it to define policies, monitor and perform investigations in the protected environment.
