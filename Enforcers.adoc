@@ -13,21 +13,21 @@ Navigate to your namespace and select Agent/Enforcer Profiles.
 
 Expand the Enforcer Profile configuration by clicking on the Expand icon on the right.
 
-image::images/enforcer-profile-1.png[width=500]
+image::images/enforcer-profile-1.png[width=600]
 
 == Editing an Enforcer Profile
 Navigate to your namespace and select Agent/Enforcer Profiles.
 
 Edit the Enforcer Profile configuration by clicking on the pencil icon on the right.
 
-image::images/enforcer-profile-2.png[width=500]
+image::images/enforcer-profile-2.png[width=600,align="center"]
 
 == Creating an Enforcer Profile
 Navigate to your namespace and select Agent/Enforcer Profiles.
 
 Click on the _"+"_ sign to go through the Enforcer Profile Wizard
 
-image::images/enforcer-profile-3.png[width=500]
+image::images/enforcer-profile-3.png[width=600,align="center"]
 
 == Enforcer Profile Settings
 You can control different aspects of Enforcers on the Enforcer Profile.
@@ -51,7 +51,7 @@ It defines what CIDRs will be completed ignored by Enforcers (no flow reporting,
 - Excluded Interfaces +
 On situations where a host has multiple interfaces and users want to apply microsegmentation to only one or to a specific groups of interfaces, you can exclude the non-wanted interfaces by adding them here. By default, all interfaces are monitored. +
 
-image::images/enforcer-profile-4.png[width=500]
+image::images/enforcer-profile-4.png[width=600,align="center"]
 
 * Syslog +
 This setting Enables/Disables the Syslog forwarding feature on Enforcers
