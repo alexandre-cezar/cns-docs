@@ -40,7 +40,6 @@ This group of settings define how Enforcers define where an identity is expected
 
 - Managed TCP Networks +
 It defines what CIDRs that will be policed by Enforcers for TCP related traffic and therefore where identity packets are expected. By default, the following networks are automatically created. +
-
 _10.0.0.0/8_, _100.64.0.0/10_, _127.0.0.0/8_, _172.16.0.0/12_, _192.168.0.0/16_, _198.18.0.0/15_
 
 - Managed UDP Networks +
