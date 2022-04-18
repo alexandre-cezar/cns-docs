@@ -4,7 +4,7 @@ Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 7, 2022:
 Once you have installed Microsegmentation, the topics in this section walk you through set up tasks.
 
 * https://github.com/alexandre-cezar/cns-docs/blob/main/Namespaces.adoc[Namespaces]
-* [Enforcers]
+* https://github.com/alexandre-cezar/cns-docs/blob/main/Enforcers.adoc[Enforcers]
 * [External Networks]
 * [Rulesets]
 * https://github.com/alexandre-cezar/cns-docs/blob/main/Host-Mode.adoc[Out of the box Rules]
