@@ -56,7 +56,7 @@ image::images/enforcer-profile-4.png[width=500]
 * Syslog +
 This setting Enables/Disables the Syslog forwarding feature on Enforcers
 
-The complete configuration guidance for syslog forwarding can be found https://xxx[here]
+The complete configuration guidance for syslog forwarding can be found https://github.com/alexandre-cezar/cns-docs/blob/main/Syslog.adoc[here]
 
 * Tags +
 You can assign tags to an Enforcer Profile for easy identification, in situations where you may have multiple profiles (optional).
