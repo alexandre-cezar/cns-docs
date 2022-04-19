@@ -1,7 +1,7 @@
 = External Networks
 Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 19, 2022:
 
-For an introduction about External Networks, please check this https://github.com/alexandre-cezar/cns-docs/blob/main/Concepts.adoc#microsegmentation-namespaces[page]
+For an introduction about External Networks, please check this https://github.com/alexandre-cezar/cns-docs/blob/main/Concepts.adoc#external-networks[page]
 
 == Creating an External Network
 To create an External Network, navigate to your namespace and go to Network Lists
