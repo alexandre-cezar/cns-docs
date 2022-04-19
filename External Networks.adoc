@@ -8,13 +8,13 @@ To create an External Network, navigate to your namespace and go to Network List
 
 Click on the _"+"_ sign to go through the Create External Network Wizard
 
-image::images/external-networks-1.png[width=500,align="center"]
+image::images/external-networks-1.png[width=600,align="center"]
 
 * Step 1 - Define a name for your External Network
 
 * Step 2 - Define the External Network value. You can use CIDR or FQDN.
 
-image::images/external-networks-2.png[width=500,align="center"]
+image::images/external-networks-2.png[width=300,align="center"]
 
 [WARNING]
 Wildcards on External Networks are supported but not recommended for use, as they can lead to corner cases where Enforcers may not be able to properly identify the related IP address. Use CIDR or fully qualified domain names and let wildcards be used only on exceptions.
