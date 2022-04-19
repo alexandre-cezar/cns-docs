@@ -1,7 +1,7 @@
 = Configure
 Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 7, 2022:
 
-Once you have installed Microsegmentation, the topics in this section walk you through set up tasks.
+Once you have installed Microsegmentation, the topics in this section walk you through setting up additional tasks.
 
 * https://github.com/alexandre-cezar/cns-docs/blob/main/Namespaces.adoc[Namespaces]
 * https://github.com/alexandre-cezar/cns-docs/blob/main/Enforcers.adoc[Enforcers]
