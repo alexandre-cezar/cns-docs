@@ -120,3 +120,18 @@ To configure an API Authorization, navigate to Namespaces/Authorization, click o
 image::images/cloud-registration-1.png[width=550,align="center"]
 
 Additional details on how to configure a cloud auto-registration policy are covered on the https://github.com/alexandre-cezar/cns-docs/blob/main/Install%20Enforcers.adoc[_Install Enforcers_] chapter.
+
+== Creating Namespacces using apoctl
+
+To create a namespace using apoctl, use the command below:
+
+`apoctl api create namespace \
+--namespace /859809532107743232/lab-cloud-account \
+-d '{
+"type": "Group",
+"defaultPUIncomingTrafficAction": "Allow",
+"defaultPUOutgoingTrafficAction": "Allow",
+"name": "sample-app"
+}'`
+
+where _/859809532107743232/lab-cloud-account_ represents the parent namespace of the namespace that is going to be created (in this case, sample-app).
