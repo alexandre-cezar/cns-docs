@@ -6,7 +6,7 @@ For an introduction about Enforcers, please check this https://github.com/alexan
 == Configuring an Enforcer Profile
 Enforcer Profiles are a set of configurations that controls different aspects of Enforcers. +
 
-When you create a new namespace, it automatically creates a new Enforcer profile on that namespace. +
+When you create a new namespace, an Enforcer Profile is automatically created on that namespace. +
 
 == Visualizing an Enforcer Profile
 Navigate to your namespace and select Agent/Enforcer Profiles.
@@ -57,6 +57,14 @@ image::images/enforcer-profile-4.png[width=600,align="center"]
 This setting Enables/Disables the Syslog forwarding feature on Enforcers
 
 The complete configuration guidance for syslog forwarding can be found https://github.com/alexandre-cezar/cns-docs/blob/main/Syslog.adoc[here]
+
+* Flow Reporting Interval +
+Enforcers report every new flow immediately, but fow updates (hit counters) are updated every 30 minutes, by default.
+
+image::images/enforcer-profile-7.png[width=150,align="center"]
+
+[IMPORTANT]
+This setting should not be changed, unless explicitly instructed by Prisma Cloud support.
 
 * Tags +
 You can assign tags to an Enforcer Profile for easy identification, in situations where you may have multiple profiles (optional).
