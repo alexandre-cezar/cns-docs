@@ -14,8 +14,7 @@ Before reading this document, we recommend that you get familiar with the key Id
 === Initial Requirements
 The first consideration is the Prisma Cloud Microsegmentation Console. It serves as both the management interface and the API. CNS administrators will use it to define policies, monitor and perform investigations in the protected environment.
 
-As such, the Enforcers must be able to reach out to the the following domains over TLS (TCP port 443) to establish console/api communication:
-
+As such, the Enforcers must be able to reach out to the following domains over TLS (TCP port 443) to establish console/api communication: +
 
 *.prismacloud.io +
 *.network.prismacloud.io +
@@ -48,9 +47,14 @@ These attributes can map your Prisma Cloud Microsegmentation namespaces, platfor
 
 image::images/planning_tags.png[width=600,align="center"]
 
-But if you're planning to use custom defined identities, it's important to align what they will be with the teams who manage the cloud resources (eg. DevOps, SRE, Cloud Admins) so they can make sure these attributes are added to the resources in their pipeline. The best practice is to keep them easy to understand, reflect the application components and to use attributes that make sense from a business or security perspective.
+Additionally, if you require more granularity in your policies, use processing unit attributes such as _$name_ or _app:host:fqdn=_ for hosts and _$image_ for containers.
+
+But if you're planning to use custom defined identities, it's important to align what they will be with the teams who manage the cloud resources (eg. DevOps, SRE, Cloud Admins) as application owners need to make sure that these attributes are added to the resources in their pipeline. The best practice is to keep them easy to understand, reflect the application components and to use attributes that make sense from a business or security perspective.
 
 Some examples are: app=payment, role=frontend, environment=prod, pci=yes
+
+[TIP]
+Our recommendation, when leveraging tags is to leverage the predefined tags as much as possible and only relying on custom tags if absolutely necessary as this can simplify your environment and reduce friction among different teams.
 
 [IMPORTANT]
 ====
