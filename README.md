@@ -7,3 +7,12 @@
 * [How Enforcers work?](https://github.com/alexandre-cezar/cns-docs/blob/main/How%20Enforcers%20work%3F.adoc)
 * [Installing Enforcers](https://github.com/alexandre-cezar/cns-docs/blob/main/Install%20Enforcers.adoc)
 * [Configure](https://github.com/alexandre-cezar/cns-docs/blob/main/Configure.adoc)
+* Monitor
+* apoctl
+* [api-server](https://github.com/alexandre-cezar/cns-docs/blob/main/api-server.adoc)
+* Policy as Code
+* Investigating Incidents
+* Upgrading Enforcers
+* Management tasks
+* Troubleshooting
+* Advanced Concepts

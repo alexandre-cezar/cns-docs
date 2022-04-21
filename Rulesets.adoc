@@ -1,0 +1,70 @@
+= Rulesets
+Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 21, 2022:
+
+For an introduction about Rulesets, please check this https://github.com/alexandre-cezar/cns-docs/blob/main/Concepts.adoc#network-rulesets[page]
+
+== Listing Rulesets
+You can list all the rulesets in a given namespace by selecting your namespace of interest and clicking on Rulesets.
+
+image::images/rulesets01.png[width=500,align="center"]
+
+== Looking at a Ruleset details
+By selecting a specific ruleset and clicking on the "Expand" icon, you can look at a ruleset details, without having to edit the ruleset.
+
+image::images/rulesets02.png[width=500,align="center"]
+
+== Editing an existing Ruleset
+Select a specific ruleset and click on the "Edit" icon.
+
+image::images/rulesets03.png[width=500,align="center"]
+
+== Creating a new Ruleset
+Navigate to the namespace of interest, select Rulesets and click on "+" button
+
+image::images/rulesets04.png[width=500,align="center"]
+
+This opens the Ruleset Wizard and after your provide a name to the Ruleset and click next, it will open the Ruleset creation page.
+
+Rulesets always have 3 components
+
+* Subject: Must match the attributes of a processing unit
+
+* Rule: Controls incoming or outgoing traffic and their respective actions
+
+* Object: Can be an external network or a processing unit
+
+In the example below, we have a ruleset subject that matches all the Processing Units in the namespace
+
+image::images/rulesets05.png[width=500,align="center"]
+
+[TIP]
+The recommended tags will always match the "@org" tags of the namespace you're in. The best practice is to always click in the "Add All" button to have the proper namespace tags added to your ruleset.
+
+image::images/rulesets06.png[width=500,align="center"]
+
+If you want to have a more granular policy, you can match specific attributes of a Processing unit in the Subject. +
+
+=== Exploring ruleset actions
+In the example below, we want to create a set of rulesets that allow a client (frontend) to send traffic to a server (api-gw).
+
+In the first ruleset, additionaly to the namespace tags, we also need to match the frontend hostname. In order to make this, we are adding the _instance-name_ tag to the subject, which will result in a specific match.
+
+image::images/rulesets07.png[width=500,align="center"]
+
+On the Action, we only want this host to send traffic to the api-gw server. In order to do this, we need to create an outgoing rule that matches the api-server PU.
+
+image::images/rulesets08.png[width=500,align="center"]
+
+As we can see above, the action is to allow traffic over tcp/443, only if the destination matches the tags of the api-gw PU (both namespace and instance-name)
+
+Next, we need to create a second ruleset to allow the api-gw to accept the request from the client.
+
+In this case, our subject needs to match the tags of the api-gw
+
+image::images/rulesets09.png[width=500,align="center"]
+
+Finally, as we only want the api-gw to accept traffic from the frontend, we need to create an incoming rule that matches the frontend PU.
+
+image::images/rulesets10.png[width=500,align="center"]
+
+== Other ruleset examples
