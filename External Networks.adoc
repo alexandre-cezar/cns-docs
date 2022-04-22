@@ -38,4 +38,4 @@ To create an External Network using apoctl, you will need to create an yaml file
 
 `apoctl api import -f <file name.yaml> -n /859809532107743232/lab-cloud-account/sample-app`
 
-where _/859809532107743232/lab-cloud-account/sample-app_ needs to be replaced with your namespace.
+where _/859809532107743232/lab-cloud-account/sample-app_ needs to be replaced with your namespace information.
