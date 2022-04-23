@@ -6,22 +6,22 @@ For an introduction about Rulesets, please check this https://github.com/alexand
 == Listing Rulesets
 You can list all the rulesets in a given namespace by selecting thee namespace of interest and clicking on Rulesets.
 
-image::images/rulesets01.png[width=500,align="center"]
+image::images/rulesets01.png[width=600,align="center"]
 
 == Looking at a Ruleset details
 By selecting a specific ruleset and clicking on the "Expand" icon, you can look at a ruleset details, without having to edit the ruleset.
 
-image::images/rulesets02.png[width=500,align="center"]
+image::images/rulesets02.png[width=600,align="center"]
 
 == Editing an existing Ruleset
 Select a specific ruleset and click on the "Edit" icon.
 
-image::images/rulesets03.png[width=500,align="center"]
+image::images/rulesets03.png[width=600,align="center"]
 
 == Creating a new Ruleset
 Navigate to the namespace of interest, select Rulesets and click on "+" button
 
-image::images/rulesets04.png[width=500,align="center"]
+image::images/rulesets04.png[width=600,align="center"]
 
 This opens the Ruleset Wizard and after your provide a name to the Ruleset and click next, it will open the Ruleset creation page.
 
@@ -35,14 +35,14 @@ A ruleset always have 3 components:
 
 In the example below, we have a Subject that matches all the Processing Units in the selected namespace
 
-image::images/rulesets05.png[width=500,align="center"]
+image::images/rulesets05.png[width=600,align="center"]
 
 [TIP]
 The recommended tags will always match the "@org" tags of the namespace you're in. The best practice is to always click in the "Add All" button to have the proper namespace tags added to your ruleset.
 
 Once added, the subject will match its respective "@org" tags
 
-image::images/rulesets06.png[width=500,align="center"]
+image::images/rulesets06.png[width=600,align="center"]
 
 If you want to have a more granular policy, you can match specific attributes of a Processing unit in the Subject. +
 
@@ -51,11 +51,11 @@ In the example below, we want to create a set of rulesets that allow a client (f
 
 In the first ruleset, additionaly to the namespace tags, we also need to match the frontend hostname. In order to make this, we are adding the _instance-name_ tag to the subject, which will result in a specific match.
 
-image::images/rulesets07.png[width=500,align="center"]
+image::images/rulesets07.png[width=600,align="center"]
 
 On the Action, we only want this host to send traffic to the api-gw server. In order to do this, we need to create an outgoing rule that matches the api-server PU.
 
-image::images/rulesets08.png[width=500,align="center"]
+image::images/rulesets08.png[width=600,align="center"]
 
 As we can see above, the action is to allow traffic over tcp/443, only if the destination matches the tags of the api-gw PU (both namespace and instance-name)
 
@@ -63,11 +63,11 @@ Next, we need to create a second ruleset to allow the api-gw to accept the reque
 
 In this case, our subject needs to match the tags of the api-gw
 
-image::images/rulesets09.png[width=500,align="center"]
+image::images/rulesets09.png[width=600,align="center"]
 
 Finally, as we only want the api-gw to accept traffic from the frontend, we need to create an incoming rule that matches the desired client (frontend PU).
 
-image::images/rulesets10.png[width=500,align="center"]
+image::images/rulesets10.png[width=600,align="center"]
 
 == Other ruleset examples
 
@@ -80,7 +80,7 @@ The ruleset will have the following components:
 * *Action* - For both Incoming and Outgoing it will be "Allow" and "any" for protocol/port
 * *Object* - For both Incoming and Outgoing it needs to match the "@org" namespace objects
 
-image::images/rulesets11.png[width=500,align="center"]
+image::images/rulesets11.png[width=600,align="center"]
 
 === Secure Inter-Namespace communication
 In this example, we want to create a ruleset that allows all traffic between two namespaces, regardless of source, destination or port
@@ -96,7 +96,7 @@ The rulesets will have the following components:
 * *Action* - For both Incoming and Outgoing it will be "Allow" and "any" for protocol/port
 * *Object* - For both Incoming and Outgoing it needs to match the "@org" namespace B objects
 
-image::images/rulesets12.png[width=500,align="center"]
+image::images/rulesets12.png[width=600,align="center"]
 
 *Namespace B Ruleset* +
 
@@ -104,7 +104,7 @@ image::images/rulesets12.png[width=500,align="center"]
 * *Action* - For both Incoming and Outgoing it will be "Allow" and "any" for protocol/port
 * *Object* - For both Incoming and Outgoing it needs to match the "@org" namespace A objects
 
-image::images/rulesets13.png[width=500,align="center"]
+image::images/rulesets13.png[width=600,align="center"]
 
 === Secure Host to Host communication
 In this example, we want to create a ruleset that allows specific traffic between two hosts
@@ -117,7 +117,7 @@ The rulesets will have the following components:
 * *Action* - For both Incoming and Outgoing it will be "Allow", plus the desired protocol/port +
 * *Object* - For both Incoming and Outgoing it needs to match the "@org" host B objects and host B hostname
 
-image::images/rulesets14.png[width=500,align="center"]
+image::images/rulesets14.png[width=600,align="center"]
 
 *Host B Ruleset* +
 
@@ -125,7 +125,7 @@ image::images/rulesets14.png[width=500,align="center"]
 * *Action* - For both Incoming and Outgoing it will be "Allow" and "any" for protocol/port
 * *Object* - For both Incoming and Outgoing it needs to match the "@org" host A objects and host A hostname
 
-image::images/rulesets15.png[width=500,align="center"]
+image::images/rulesets15.png[width=600,align="center"]
 
 === Secure pod-to-pod communication
 In this example, we want to create a ruleset that allows specific traffic between two set of pods
@@ -141,7 +141,7 @@ The rulesets will have the following components:
 * *Action* - For both Incoming and Outgoing it will be "Allow", plus the desired protocol/port
 * *Object* - For both Incoming and Outgoing it needs to match the "@org" pod B objects and image B tag
 
-image::images/rulesets16.png[width=500,align="center"]
+image::images/rulesets16.png[width=600,align="center"]
 
 *Image B Ruleset* +
 
@@ -149,7 +149,7 @@ image::images/rulesets16.png[width=500,align="center"]
 * *Action* - For both Incoming and Outgoing it will be "Allow" and "any" for protocol/port+
 * *Object* - For both Incoming and Outgoing it needs to match the "@org" pod A objects and image A tag
 
-image::images/rulesets17.png[width=500,align="center"]
+image::images/rulesets17.png[width=600,align="center"]
 
 === Secure egress traffic
 In this example, we want to create a ruleset that allows specific traffic between a pod and a PaaS resource, in our example an AWS RDS database
@@ -162,7 +162,7 @@ The ruleset will have the following components:
 * *Action* - As we only need egress traffic, we only need to allow outgoing in the desired protocol/port
 * *Object* - It needs to match the RDS Database External Network object
 
-image::images/rulesets18.png[width=500,align="center"]
+image::images/rulesets18.png[width=600,align="center"]
 
 === Secure ingress traffic
 In this example, we want to create a ruleset that allows traffic from the Internet to a front-end application.
@@ -176,7 +176,7 @@ The ruleset will have the following components:
 * *Action* - As we only need ingress traffic, we only need to allow incoming in the desired protocol/port
 * *Object* - It needs to match the Internet External Network object (in this case 0.0.0.0/0)
 
-image::images/rulesets19.png[width=500,align="center"]
+image::images/rulesets19.png[width=600,align="center"]
 
 === Prevent cross-cloud account traffic
 In this example, we want to create a ruleset that prevents traffic between prod and dev cloud accounts
@@ -190,7 +190,7 @@ The ruleset will have the following components:
 * *Action* - For both Incoming and Outgoing it will be "Reject", with "Any" for the protocol/port
 * *Object* - For both Incoming and Outgoing it needs to match the "@org" tags for the prod cloud account
 
-image::images/rulesets20.png[width=500,align="center"]
+image::images/rulesets20.png[width=600,align="center"]
 
 *Prod Cloud Account Ruleset* +
 
@@ -199,7 +199,7 @@ image::images/rulesets20.png[width=500,align="center"]
 * *Action* - For both Incoming and Outgoing it will be "Reject", with "Any" for the protocol/port
 * *Object* - For both Incoming and Outgoing it needs to match the "@org" tags for the dev cloud account
 
-image::images/rulesets21.png[width=500,align="center"]
+image::images/rulesets21.png[width=600,align="center"]
 
 === Block traffic to an external domain
 In this example, we want to create a ruleset that rejects specific traffic from an entire cloud account to a specific domain
@@ -210,12 +210,12 @@ The ruleset will have the following components:
 
 * *Subject* - Needs to match the "@org" tags of the cloud accoun
 * *Action* - As we only need egress traffic, we only need to reject outgoing in "any" protocol/port
-* *Object* - It needs to match speicific domain External Network object
+* *Object* - It needs to match specific domain External Network object
 
-image::images/rulesets22.png[width=500,align="center"]
+image::images/rulesets22.png[width=600,align="center"]
 
 == Creating rulesets using apoctl
-To create an External Network using apoctl, you will need to create an yaml file with your ruleset configuration and import it to the namespace of interest, using the command below:
+To create an External Network using apoctl, you will need to create a yaml file with your ruleset configuration and import it to the namespace of interest, using the command below:
 
 `apoctl api import -f <file name.yaml> -n /859809532107743232/lab-cloud-account/sample-app`
 
