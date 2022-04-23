@@ -6,22 +6,22 @@ For an introduction about Rulesets, please check this https://github.com/alexand
 == Listing Rulesets
 You can list all the rulesets in a given namespace by selecting thee namespace of interest and clicking on Rulesets.
 
-image::images/rulesets01.png[width=800,align="center"]
+image::images/rulesets01.png[width=700,align="center"]
 
 == Looking at a Ruleset details
 By selecting a specific ruleset and clicking on the "Expand" icon, you can look at a ruleset details, without having to edit the ruleset.
 
-image::images/rulesets02.png[width=800,align="center"]
+image::images/rulesets02.png[width=700,align="center"]
 
 == Editing an existing Ruleset
 Select a specific ruleset and click on the "Edit" icon.
 
-image::images/rulesets03.png[width=800,align="center"]
+image::images/rulesets03.png[width=700,align="center"]
 
 == Creating a new Ruleset
 Navigate to the namespace of interest, select Rulesets and click on "+" button
 
-image::images/rulesets04.png[width=800,align="center"]
+image::images/rulesets04.png[width=700,align="center"]
 
 This opens the Ruleset Wizard and after your provide a name to the Ruleset and click next, it will open the Ruleset creation page.
 
@@ -35,7 +35,7 @@ A ruleset always have 3 components:
 
 In the example below, we have a Subject that matches all the Processing Units in the selected namespace
 
-image::images/rulesets05.png[width=750,align="center"]
+image::images/rulesets05.png[width=700,align="center"]
 
 [TIP]
 The recommended tags will always match the "@org" tags of the namespace you're in. The best practice is to always click in the "Add All" button to have the proper namespace tags added to your ruleset.
