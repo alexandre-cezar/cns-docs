@@ -186,7 +186,7 @@ Rulesets will always match the more specific tags. If you are matching the tags 
 
 If you add the tags of a group namespace or Kubernetes namespace and also specific attributes of a processing unit (like the image name or FQDN) to the subject and actions, only the specific PUs will match this policy.
 
-image::images/Ruleset Tags matching.png[width=1000,align="center"]
+image::images/Ruleset Tags matching.png[width=800,align="center"]
 
 === Rulesets Precedence Order
 For each new session, the Enforcer checks its local network rulesets to find a matching ruleset. +
