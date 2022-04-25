@@ -142,8 +142,6 @@ For more complex keys, consisting of several parts, a colon is used as a delimit
 == App credentials and Tokens
 Each Microsegmentation Console has its own private certificate authority (CA) capable of issuing X.509 certificates to authorized clients upon request. It uses public-private key cryptography to ensure that private keys never travel the wire. +
 
-
-
 Authorized clients can use X.509 certificates issued by the Microsegmentation Console CA to access the Microsegmentation Console API. We These certificates are called "app credentials". +
 They allow the clients to:
 
@@ -168,7 +166,7 @@ Network Rulesets are stateful policies that allow you to control traffic between
 * Processing units +
 * Processing units and External networks
 
-=== Network ruleset components
+=== Network Rulesets components
 Each network ruleset must have at least one subject, rule, and object. +
 
 * Subject: Must match the attributes of a processing unit
@@ -182,6 +180,9 @@ The following diagram illustrates the syntax and enforcement of network rulesets
 image::images/concepts_rulesets[width=500,align="center"]
 
 For simplicity, the diagram above shows a ruleset with just one subject, two rules, and two objects. A ruleset can have multiple subjects, incoming rules, outgoing rules, and objects.
+
+=== Tag Matching in Rulesets
+
 
 === Rulesets Precedence Order
 For each new session, the Enforcer checks its local network rulesets to find a matching ruleset. +
