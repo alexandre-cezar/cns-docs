@@ -6,7 +6,7 @@
 * [System Requirements](https://github.com/alexandre-cezar/cns-docs/blob/main/System%20Requirements.adoc)
 * [Planning a Microsegmentation Deployment](https://github.com/alexandre-cezar/cns-docs/blob/main/Planning.adoc)
 * [Installing Enforcers](https://github.com/alexandre-cezar/cns-docs/blob/main/Install%20Enforcers.adoc)
-* Network Visualization
+* Network Traffic Visualization and Analytics
 * [Configure](https://github.com/alexandre-cezar/cns-docs/blob/main/Configure.adoc)
 * Monitor
 * apoctl
