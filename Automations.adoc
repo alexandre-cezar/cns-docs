@@ -65,7 +65,7 @@ image::images/automations-05.png[width=500,align="center"]
 
 image::images/automations-07.png[width=500,align="center"]
 
-* Severity -> Define what severity is added to the alert.
+* Severity -> Define what severity is going to be added to the alert.
 
 image::images/automations-08.png[width=300,align="center"]
 
