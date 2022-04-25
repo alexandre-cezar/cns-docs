@@ -4,12 +4,12 @@ Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 21, 2022:
 For an introduction about Rulesets, please check this https://github.com/alexandre-cezar/cns-docs/blob/main/Concepts.adoc#network-rulesets[page]
 
 == Listing Rulesets
-You can list all the rulesets in a given namespace by selecting thee namespace of interest and clicking on Rulesets.
+You can list all the rulesets in a given namespace by selecting the namespace of interest and clicking on Rulesets.
 
 image::images/rulesets01.png[width=700,align="center"]
 
 == Looking at a Ruleset details
-By selecting a specific ruleset and clicking on the "Expand" icon, you can look at a ruleset details, without having to edit the ruleset.
+By selecting a specific ruleset and clicking on the "Expand" icon, you can look at its details, without having to explicitly edit the ruleset.
 
 image::images/rulesets02.png[width=700,align="center"]
 
@@ -214,8 +214,8 @@ The ruleset will have the following components:
 
 image::images/rulesets22.png[width=600,align="center"]
 
-== Creating rulesets using apoctl
-To create an External Network using apoctl, you will need to create a yaml file with your ruleset configuration and import it to the namespace of interest, using the command below:
+== Creating Rulesets using apoctl
+To create an External Network using apoctl, you will need to create a yaml file with your ruleset configuration and import it to the namespace of interest, using the command below as an example:
 
 `apoctl api import -f <file name.yaml> -n /859809532107743232/lab-cloud-account/sample-app`
 
