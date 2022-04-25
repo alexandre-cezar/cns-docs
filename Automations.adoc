@@ -1,0 +1,74 @@
+= Alerts and Automations
+Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 25, 2022:
+
+Prisma Cloud Microsegmentation alerts are used on situations where you have specific controls you want to enforce and get immediate alerts when a violation happens:
+
+== Alert Types
+There are 4 specific alert types supported on Prisma Cloud Microsegmentation:
+
+* Ruleset -> Alerts are generated when traffic matches a specific ruleset.
+
+* Host Processing Units -> Alerts are generated when a Host PU is connected or disconnected.
+
+* Enforcer -> Alerts are generated when an Enforcer is connected or disconnected
+
+* Audit -> Alerts are generated when a specific action is executed in the system.
+
+There's always two components to an alert:
+
+* Integration -> Defines the downstream system where alerts will be forwarded to.
+Today, email and slack are supported integrations
+
+* Automation -> Defines what Alert type is going to be created and the triggers for an alarm to be generated
+
+== Creating an Integration
+Navigate to _Manage/Alerts and Automations_ and click on the Integrations tab.
+
+Click on the _"Add"_ button on the right and select the Integration you want to create.
+
+image::images/automations-01.png[width=500,align="center"]
+
+For the email integration, just type the emails you want to send alerts to
+
+image::images/automations-02.png[width=350,align="center"]
+
+For the Slack integration, just type the incoming Webhook URL of the Slack channel you want to send alerts to
+
+image::images/automations-03.png[width=500,align="center"]
+
+[NOTE]
+You cannot edit an Integration once it's created.
+
+== Creating an Automation
+Navigate to _Manage/Alerts and Automations_ and click on the Automations tab.
+
+Click on the _"Add"_ button on the right and select the Automation type you want to create.
+
+image::images/automations-04.png[width=500,align="center"]
+
+=== Host PU Automation details
+The Host PU Automation Wizard will request the following information:
+
+* General -> Provide a name and description for the automation (optional).
+
+image::images/automations-05.png[width=500,align="center"]
+
+* Conditions -> Define what Host PU events should be alerted upon.
+
+image::images/automations-06.png[width=500,align="center"]
+
+* General -> Provide a name and description for the automation (optional).
+
+image::images/automations-05.png[width=500,align="center"]
+
+* Actions -> Define what Integration(s) will be notified once an event is detected.
+
+image::images/automations-07.png[width=500,align="center"]
+
+* Severity -> Define what severity is added to the alert.
+
+image::images/automations-08.png[width=300,align="center"]
+
+[IMPORTANT]
+Integrations and Automations are namespace specific and as such, multiple integrations and automations can be leveraged independent of each other, although propagation is supported from parent to children.
+

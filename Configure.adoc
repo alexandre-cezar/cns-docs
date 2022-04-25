@@ -11,5 +11,5 @@ Once you have installed Microsegmentation, the topics in this section walk you t
 * https://github.com/alexandre-cezar/cns-docs/blob/main/Application%20Profiling.adoc[Application Profiling]
 * https://github.com/alexandre-cezar/cns-docs/blob/main/Host-Mode.adoc[Host Mode]
 * https://github.com/alexandre-cezar/cns-docs/blob/main/api-server.adoc[api-server]
-* [API Authorizations]
+* https://github.com/alexandre-cezar/cns-docs/blob/main/Api%20Authorization.adoc[API Authorizations]
 * [Alerts & Automations]
