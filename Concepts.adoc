@@ -182,7 +182,11 @@ image::images/concepts_rulesets[width=500,align="center"]
 For simplicity, the diagram above shows a ruleset with just one subject, two rules, and two objects. A ruleset can have multiple subjects, incoming rules, outgoing rules, and objects.
 
 === Tag Matching in Rulesets
+Rulesets will always match the more specific tags. If you are matching the tags of a cloud account namespace, that means all processing units that has this tag (basically all PUs deployed on children namespaces will be matched against this ruleset). +
 
+If you add the tags of a group namespace or Kubernetes namespace and also specific attributes of a processing unit (like the image name or FQDN) to the subject and actions, only the specific PUs will match this policy.
+
+image::images/Ruleset Tags matching.png[width=1000,align="center"]
 
 === Rulesets Precedence Order
 For each new session, the Enforcer checks its local network rulesets to find a matching ruleset. +
@@ -190,7 +194,7 @@ It may find multiple matches. If so, it resolves these as follows. +
 
 image::images/concepts_rulesets_precedence_order.jpeg[width=500,align="center"]
 
-Inheritance is an important concept to understand as rulesets created on parent level namespaces are inherit by all child namespaces. +
+Inheritance is an important concept to understand as rulesets created on parent level namespaces are inherited by all child namespaces. +
 This capability allows administrators to define guardrails at the tenant or cloud-account namespaces that will be enforced across all applications.
 
 [IMPORTANT]
