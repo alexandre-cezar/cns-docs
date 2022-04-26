@@ -8,7 +8,7 @@
 * [Installing Enforcers](https://github.com/alexandre-cezar/cns-docs/blob/main/Install%20Enforcers.adoc)
 * Network Traffic Visualization and Analytics
 * [Configure](https://github.com/alexandre-cezar/cns-docs/blob/main/Configure.adoc)
-* Monitor
+* Logs
 * apoctl
 * [api-server (K8s CRD operator)](https://github.com/alexandre-cezar/cns-docs/blob/main/api-server.adoc)
 * [Policy as Code](https://github.com/alexandre-cezar/cns-docs/blob/main/Policy%20as%20Code.adoc)
