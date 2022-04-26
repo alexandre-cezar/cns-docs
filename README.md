@@ -11,7 +11,7 @@
 * Monitor
 * apoctl
 * [api-server](https://github.com/alexandre-cezar/cns-docs/blob/main/api-server.adoc)
-* Policy as Code
+* [Policy as Code](https://github.com/alexandre-cezar/cns-docs/blob/main/Policy%20as%20Code.adoc)
 * Investigating Incidents
 * Management tasks
 * Troubleshooting
