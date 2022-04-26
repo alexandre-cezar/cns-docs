@@ -1,5 +1,8 @@
 = API Authorizations
 Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 25, 2022:
+:toc:
+:toc-title:
+:icons: font
 
 == Listing Authorizations
 You can list all the authorizations in a given namespace by selecting the namespace of interest and clicking on Namespaces/Authorizations:

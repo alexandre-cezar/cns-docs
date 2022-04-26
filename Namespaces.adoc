@@ -1,5 +1,8 @@
 = Namespaces
 Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 13, 2022:
+:toc:
+:toc-title:
+:icons: font
 
 For an introduction about Namespaces, please check this https://github.com/alexandre-cezar/cns-docs/blob/main/Concepts.adoc#microsegmentation-namespaces[page]
 

@@ -1,5 +1,8 @@
 = api-server
 Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 12, 2022:
+:toc:
+:toc-title:
+:icons: font
 
 Users can access, create, or update micro-segmentation backend objects in the following ways:
 
@@ -69,16 +72,6 @@ Replace <object-name> with the name of your Kubernetes object.
 
 * Update PU Traffic Action at a namespace by using the command `kubectl edit putrafficaction -n <namespace>` and then modify the Incoming and Outgoing values as per your requirement and save the changes.
 
-== LIMITATIONS OR KNOWN-ISSUES
-
-* You cannot create 2 objects for a given api-resource with the same name. For example: you cannot create 2 external networks with the same name as “external-network-test” using the kubectl CLI as k8s does not allow it. On the other hand, you can add two objects with the same name using the UI.
-
-* You cannot rename an object via kubectl CLI. For example: if you named a network ruleset as “network ruleset 1” you cannot change it to  “network ruleset 2” as K8s does not allow it. Alternatively, you can create a copy of the YAML file, rename it, and apply it to create a new object. +
-
-* When a K8s namespace is deleted, all the objects created in it via kubectl are deleted but the objects created via apoctl or console are not. If you synced the K8s namespaces with your backend, the namespaces remain in the backend even after you delete the K8s namespaces.
-
-* Any protected object has to be updated to unprotected before deletion can occur.
-
 [WARNING]
 Backend objects can be lost. After you create a backend object using the console or apoctl CLI, avoid creating a new backend object with the same name using kubectl and the aggregated api-server. When you delete the objects using kubectl, it deletes all the objects with the same name. Use different names for all your backend objects to avoid deleting them inadvertently.
 
@@ -87,7 +80,7 @@ You can review the available resources with the command `kubectl api-resources -
 
 image::images/api-server-01.png[width=500,align="center"]
 
-=== EXAMPLE - How to create a new network ruleset using the api-server
+=== Example - How to create a new network ruleset using the api-server
 
 Follow these steps to create a network ruleset to allo PU to PU communication from one namespace (frontend app) to another namespace (backend app) over TCP protocol on port 443.
 
@@ -113,3 +106,13 @@ https://github.com/alexandre-cezar/cns-docs/blob/main/clusternetworkrulesetpolic
 https://github.com/alexandre-cezar/cns-docs/blob/main/externalnetwork.yaml[externalnetwork]
 
 https://github.com/alexandre-cezar/cns-docs/blob/main/networkrulesetpolicy.yaml[networkrulesetpolicy]
+
+== Limitations
+
+* You cannot create 2 objects for a given api-resource with the same name. For example: you cannot create 2 external networks with the same name as “external-network-test” using the kubectl CLI as k8s does not allow it. On the other hand, you can add two objects with the same name using the UI.
+
+* You cannot rename an object via kubectl CLI. For example: if you named a network ruleset as “network ruleset 1” you cannot change it to  “network ruleset 2” as K8s does not allow it. Alternatively, you can create a copy of the YAML file, rename it, and apply it to create a new object. +
+
+* When a K8s namespace is deleted, all the objects created in it via kubectl are deleted but the objects created via apoctl or console are not. If you synced the K8s namespaces with your backend, the namespaces remain in the backend even after you delete the K8s namespaces.
+
+* Any protected object has to be updated to unprotected before deletion can occur.

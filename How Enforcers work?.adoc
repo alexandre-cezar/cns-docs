@@ -1,5 +1,8 @@
 = Enforcer architecture
 Alexandre Cezar <acezar@paloaltonetworks.com>, April 4, 2022:
+:toc:
+:toc-title:
+:icons: font
 
 Customers often ask how Prisma Cloud Enforcer really works under the hood.
 

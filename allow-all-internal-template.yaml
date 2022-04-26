@@ -1,0 +1,31 @@
+APIVersion: 0
+data:
+  networkrulesetpolicies:
+    - name: Allow internal traffic
+      outgoingRules:
+        - action: Allow
+          logsDisabled: false
+          object:
+            - - $identity=processingunit
+              - '@org:group=AzureDevOps'
+          observationEnabled: false
+          protocolPorts:
+            - any
+      incomingRules:
+        - action: Allow
+          logsDisabled: false
+          object:
+            - - $identity=processingunit
+              - '@org:group=AzureDevOps'
+          observationEnabled: false
+          protocolPorts:
+            - any
+      propagate: true
+      subject:
+        - - '@org:group=AzureDevOps'
+          - '@org:cloudaccount=my_cloud_account'
+          - '@org:tenant=807152304871829504'
+          - $identity=processingunit
+identities:
+  - networkrulesetpolicy
+label: Policy_Internal

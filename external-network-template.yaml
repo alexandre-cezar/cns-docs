@@ -1,0 +1,12 @@
+APIVersion: 0
+data:
+  externalnetworks:
+    - associatedTags:
+        - 'externalnetwork:name=External'
+      entries:
+        - 0.0.0.0/0
+      name: External
+      propagate: true
+identities:
+  - externalnetwork
+label: External

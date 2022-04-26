@@ -1,0 +1,26 @@
+APIVersion: 0
+data:
+  networkrulesetpolicies:
+    - name: Allow External traffic
+      outgoingRules:
+        - action: Allow
+          logsDisabled: false
+          object:
+            - - $identity=processingunit
+              - '@org:group=AzureDevOps'
+          observationEnabled: false
+          protocolPorts:
+            - tcp/80
+            - tcp/443
+            - udp/53
+            - udp/123
+            - udp/67
+            - udp/68
+      subject:
+        - - '@org:group=AzureDevOps'
+          - '@org:cloudaccount=my_cloud_account'
+          - '@org:tenant=807152304871829504'
+          - $identity=processingunit
+identities:
+  - networkrulesetpolicy
+label: Policy_External

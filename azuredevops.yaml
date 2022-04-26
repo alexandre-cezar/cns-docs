@@ -1,0 +1,88 @@
+# Variable 'apoctl.creds' was defined in the Variables tab
+
+# Variable 'apoctl.namespace' was defined in the Variables tab
+
+jobs:
+
+  - job: Job_1
+
+  displayName: Worker
+
+  pool:
+
+    vmImage: ubuntu-20.04
+
+  steps:
+
+    - checkout: self
+
+    - task: CmdLine@2
+
+      displayName: Download apoctl
+
+      inputs:
+
+        script: >-
+          
+          sudo curl -o /usr/local/bin/apoctl \
+          
+            https://download.aporeto.com/apoctl/linux/apoctl && \
+          
+          sudo chmod 755 /usr/local/bin/apoctl
+
+    - task: CmdLine@2
+
+      displayName: Check if the authorization works
+
+      inputs:
+
+        script: apoctl auth verify
+
+    - task: CmdLine@2
+
+      displayName: Create the AzureDevOps Namespace
+
+      inputs:
+
+        script: >-
+          
+          apoctl api create namespace \
+          
+          
+          --namespace /807152304871829504/my_cloud_account \
+          
+          
+          -d '{
+          
+            "type": "Group",
+          
+            "defaultPUIncomingTrafficAction": "Allow",
+          
+            "defaultPUOutgoingTrafficAction": "Allow",
+          
+            "name": "AzureDevOps"
+          
+          }'
+
+    - task: CmdLine@2
+
+      displayName: Import the Network List
+
+      inputs:
+
+        script: apoctl api import -f External.yaml -n /807152304871829504/my_cloud_account/AzureDevOps
+
+    - task: CmdLine@2
+
+      displayName: Import the Rulesets
+
+      inputs:
+
+        script: >-
+          
+          apoctl api import -f Allow_internal_traffic.yaml -n /807152304871829504/my_cloud_account/AzureDevOps
+          
+          
+          apoctl api import -f Allow_External.yaml -n /807152304871829504/my_cloud_account/AzureDevOps
+
+...

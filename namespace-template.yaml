@@ -1,0 +1,8 @@
+APIVersion: 1
+data:
+  namespaces:
+    - defaultPUIncomingTrafficAction: Allow
+      defaultPUOutgoingTrafficAction: Allow
+      name: Jenkins
+      type: Group
+label: Namespace_Jenkins

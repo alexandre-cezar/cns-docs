@@ -1,6 +1,7 @@
 = Monitor Network Traffic
 Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 5, 2022:
 
+
 One of the key aspects of microsegmentation is to make sure that all required flows of a given application are being properly allowed by a ruleset. Everything else should be considered as an exception (least privilege model).
 
 With this approach, it becomes easier for security teams to define alarms for guardrail violations and to investigate anomalies.
