@@ -15,4 +15,4 @@
 * Investigating Incidents
 * Management tasks
 * Troubleshooting
-* Advanced Concepts
+* [Advanced Concepts](https://github.com/alexandre-cezar/cns-docs/blob/main/Advanced%20Topics.adoc)
