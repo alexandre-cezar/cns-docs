@@ -10,7 +10,7 @@
 * [Configure](https://github.com/alexandre-cezar/cns-docs/blob/main/Configure.adoc)
 * Monitor
 * apoctl
-* [api-server](https://github.com/alexandre-cezar/cns-docs/blob/main/api-server.adoc)
+* [api-server (K8s CRD operator)](https://github.com/alexandre-cezar/cns-docs/blob/main/api-server.adoc)
 * [Policy as Code](https://github.com/alexandre-cezar/cns-docs/blob/main/Policy%20as%20Code.adoc)
 * Investigating Incidents
 * Management tasks

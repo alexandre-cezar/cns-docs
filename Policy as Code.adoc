@@ -113,7 +113,7 @@ In tasks 4 and 5, we're importing the Network List and Rulesets objects. The obj
 [NOTE]
 You can combine all these tasks into a single one, we just separated them here for a better visualization.
 
-A detailed example of the complete task is provided https://www[here] as a reference
+A detailed example of the complete task is provided https://github.com/alexandre-cezar/cns-docs/blob/main/azuredevops.yaml[here] as a reference
 
 ==== Jenkins
 * Step 1 -> Store the configuration files in your repository +
@@ -152,9 +152,9 @@ Finally, we need to import the rulesets that will enforce the desired state in o
 
 The objects used in the examples can be found in the locations below:
 
-** https://www[External Network template]
-** https://www[Namespace template]
-** https://www[Outgoing ruleset template]
-** https://www[Allow-All internal template]
+** https://github.com/alexandre-cezar/cns-docs/blob/main/external-network-template.yaml[External Network template]
+** https://github.com/alexandre-cezar/cns-docs/blob/main/namespace-template.yaml[Namespace template]
+** https://github.com/alexandre-cezar/cns-docs/blob/main/outgoing-ruleset-template.yaml[Outgoing ruleset template]
+** https://github.com/alexandre-cezar/cns-docs/blob/main/allow-all-internal-template.yaml[Allow-All internal template]
 
-A detailed example of a Jenkinsfile is provided https://www[here] as a reference
+A detailed example of a Jenkinsfile is provided https://github.com/alexandre-cezar/cns-docs/blob/main/jenkins.yaml[here] as a reference
