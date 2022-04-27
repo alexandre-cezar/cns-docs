@@ -29,7 +29,7 @@ image::images/application_profiling_2.png[width=500]
 [IMPORTANT]
 It’s important that Application Profiling is able to observe the whole application lifecycle (start,run,terminate phases) as many applications execute some actions only at specific phases (like readiness probes and data import/export events)
 
-See how to https://xxx[Create an application profile].
+See how to https://github.com/alexandre-cezar/cns-docs/blob/main/Create%20Application%20Profile.adoc[Create an application profile].
 
 
 
