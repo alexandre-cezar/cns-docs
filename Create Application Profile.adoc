@@ -1,7 +1,7 @@
 = Create an Application Profile
 Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 7, 2022:
 
-https://xxx[Application profiling] analyses the accepted flows from the App-Dependency Map for the selected timeframe and provides a very granular set of tags that reflect the application resources. +
+https://github.com/alexandre-cezar/cns-docs/blob/main/Application%20Profiling.adoc[Application profiling] analyses the accepted flows from the App-Dependency Map for the selected timeframe and provides a very granular set of tags that reflect the application resources. +
 
 For every single flow analyzed, the algorithm identifies the source and destination are processing units if both are processing units, it removes all the unnecessary (or noisy) tags (those which are not starting with the tag prefixes or those which are too repetitive) and determines the smallest group of tags that represents both workloads for a given flow. +
 It then optimizes both source and destinations to have a common set of tags and converts them into a list of rulesets.
