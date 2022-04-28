@@ -67,7 +67,7 @@ image::images/planning_custom_tags.png[width=350,align="center"]
 
 An important aspect of custom attributes is where to define them in the system. +
 
-The recommendation is to create them as high as possible in the namespace hierarchy. This will allow all rulesets across the child namespaces to be able to leverage these attributes in an uniformed way.
+The recommendation is to create them as higher as possible in the namespace hierarchy. This will allow all rulesets across the child namespaces to be able to leverage these attributes in an uniformed way.
 
 === Create the Namespace Hierarchy
 The relationship between your teams and your environments, alongside with who has authority to set policies, further defines how your namespaces will be organized.
