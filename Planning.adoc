@@ -234,7 +234,7 @@ A visualization is provided below:
 image::images/planning_k8s_policies.jpeg[width=500,align="center"]
 
 == Enforcement Phase
-After AN application in a given namespace was monitored, validation tests were successfully concluded and the proper policies are in place, it's time to enforce microsegmentation.
+After an application in a given namespace is monitored, validation tests were successfully concluded and the proper policies are in place, it's time to enforce microsegmentation.
 
 The best practice is to roll out the enforcement mode by namespace and this can be done by switching the Default Action in the namespace to "Reject". With that, you can ensure that only the desired namespace goes into enforcement mode and all the others that are not ready yet, will remain in "Discovery Mode".
 
@@ -260,6 +260,7 @@ image::images/flow_analysis_trend.png[width=400,align="center"]
 == Operations Phase
 
 === Configure alerts for guardrail rules
+A good practice is to configure Enforcers to forward logs to a centralized platform, using syslog or an automation script and to setup alerts for important policies you want to monitor (like a cross-account policy or the default policy in namespaces)
 
 === Upgrade Enforcers
 Enforcers maintain backwards compatibility with the console, but when required, you can upgrade them using the Microsegmentation Console UI, apoctl, Prisma Cloud Identity Based Microsegmentation APIs or you can update them manually.
