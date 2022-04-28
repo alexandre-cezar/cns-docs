@@ -2,6 +2,7 @@
 Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 28, 2022:
 :toc:
 :toc-title:
+:toclevels: 4
 :icons: font
 
 `apoctl` is the official command line tool (CLI) to interact with the
@@ -9,7 +10,7 @@ Microsegmentation Console.
 
 == Download apoctl from the console
 
-== Configure apoctl
+== Configure apoctl using the console
 
 == apoctl basics
 `apoctl` provides the following main commands:
@@ -85,7 +86,7 @@ On macOS, you may need to install the bash-completion package which is not insta
 
     brew install bash-completion@2
 
-== Profiles
+== Understanding Profiles
 
 `apoctl` supports multiple configuration profiles that can be placed in `~/.apoctl`.
 
@@ -121,26 +122,60 @@ Profile example:
     output: yaml
 
 == Command list
-** api -> Allow api manipulation +
-** appcred -> Manage application credentials
-** audit -> Allow audit manipulation
-** auth -> Allow authentication
-** aws  -> Manages AWS IAM policies and associated Aporeto scope policies
-** completion -> Generate shell completion
-** configure -> configure your apoctl environment
-** enforcer -> Allow enforcer management.
-** help -> Help about any command
-** list-versions -> list available versions.
-** metrics -> Manages the Metrics APIs.
-** oam -> Operations and Mainteanance related commands
-** profiles -> manage apoctl profiles
-** reports -> Generates supported reports
-** reportsquery -> Allows the querying of reports.
-** stats -> Manages Aporeto Statistics APIs.
-** update -> Update apoctl to a specific version.
+
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/api.adoc[api]
+Allow api manipulation +
+
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/appcred.adoc[appcred]
+Manage application credentials +
+
+=== audit
+Allow audit manipulation +
+
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/auth.adoc[auth]
+Allow authentication +
+
+=== aws
+Manages AWS IAM policies and associated Aporeto scope policies +
+
+=== completion
+Generate shell completion +
+
+=== configure
+configure your apoctl environment +
+
+=== enforcer
+Allow enforcer management +
+
+=== help
+Help about any command +
+
+=== list-versions
+list available versions +
+
+=== metrics
+Manages the Metrics APIs +
+
+=== oam
+Operations and Maintenance related commands +
+
+=== profiles
+Manages apoctl profiles +
+
+=== reports
+Generates supported reports +
+
+=== reportsquery
+Allows the querying of reports +
+
+=== stats
+Manages Aporeto Statistics APIs +
+
+=== update
+Updates apoctl to a specific version
 
 Options: +
--A, --api string -> Server API URL. (defaults points to the Prisma Cloud region API GW ) +
+-A, --api string -> Server API URL. (default points to the Prisma Cloud region API GW ) +
 
 --api-cacert string -> Path to the CA to use for validating api endpoint. +
 
