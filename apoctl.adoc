@@ -129,9 +129,6 @@ Allow api manipulation +
 === https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/appcred.adoc[appcred]
 Manage application credentials +
 
-=== audit
-Allow audit manipulation +
-
 === https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/auth.adoc[auth]
 Allow authentication +
 
