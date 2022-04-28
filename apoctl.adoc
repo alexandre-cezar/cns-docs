@@ -135,7 +135,7 @@ Allow audit manipulation +
 === https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/auth.adoc[auth]
 Allow authentication +
 
-=== aws
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/aws.adoc[aws]
 Manages AWS IAM policies and associated Aporeto scope policies +
 
 === completion
