@@ -5,12 +5,12 @@ Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 7, 2022:
 :icons: font
 
 == Create Cloud Account Namespaces
-Cloud account namespaces are used to specify: +
+Cloud account namespaces are used to identify: +
 
 * AWS Cloud Accounts
 * Azure Subscriptions
 * GCP projects
-* Datacenter
+* Datacenters
 
 Step 1 - To create a cloud account level namespace, navigate to the Namespace page under Network Security > Microseg. +
 Make sure that you are on the root (tenant level namespace)
