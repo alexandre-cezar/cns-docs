@@ -135,13 +135,13 @@ Allow authentication +
 === https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/aws.adoc[aws]
 Manages AWS IAM policies and associated Aporeto scope policies +
 
-=== completion
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/completion.adoc[completion]
 Generate shell completion +
 
-=== configure
-configure your apoctl environment +
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/configure.adoc[configure]
+Configures your apoctl environment +
 
-=== enforcer
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/enforcer.adoc[enforcer]
 Allow enforcer management +
 
 === help
