@@ -147,9 +147,6 @@ Allow enforcer management +
 === help
 Help about any command +
 
-=== list-versions
-list available versions +
-
 === metrics
 Manages the Metrics APIs +
 
