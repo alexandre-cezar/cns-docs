@@ -11,7 +11,7 @@
 * Logs
 * [apoctl](https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl.adoc)
 * [api-server (K8s CRD operator)](https://github.com/alexandre-cezar/cns-docs/blob/main/api-server.adoc)
-* [Policy as Code](https://github.com/alexandre-cezar/cns-docs/blob/main/Policy%20as%20Code.adoc)
+* [Microsegmentation as Code](https://github.com/alexandre-cezar/cns-docs/blob/main/Policy%20as%20Code.adoc)
 * Investigating Incidents
 * Management tasks
 * Troubleshooting
