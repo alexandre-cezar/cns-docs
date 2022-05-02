@@ -147,22 +147,25 @@ Allow enforcer management +
 === help
 Help about any command +
 
-=== metrics
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/metrics.adoc[metrics]
 Manages the Metrics APIs +
 
-=== oam
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/oam.adoc[oam]
 Operations and Maintenance related commands +
 
-=== profiles
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/profiles.adoc[profiles]
 Manages apoctl profiles +
 
-=== reports
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/reports.adoc[reports]
 Generates supported reports +
 
-=== reportsquery
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/reportsquery.adoc[reportsquery]
 Allows the querying of reports +
 
-=== stats
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/ssh.adoc[ssh]
+Allows you to manage SSH certificates and provides helpers to connect to an OpenSSH server
+
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl/stats.adoc[stats]
 Manages Aporeto Statistics APIs +
 
 === update
