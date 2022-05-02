@@ -9,8 +9,26 @@ Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 28, 2022:
 Microsegmentation Console.
 
 == Download apoctl from the console
+Apoctl can be downloaded directly from the Microsegmentation console.
+
+On any page in UI, click on the _key_ icon at the bottom of the page to open the apoctl UI
+
+image::images/apoctl-01.png[width=500,align="center"]
+
+In the apoctl page, select the binary that matches your operational system, copy and paste the command on your system.
+
+image::images/apoctl-02.png[width=500,align="center"]
+
+MacOS, Linux and Windows OS are supported
 
 == Configure apoctl using the console
+For apoctl to work, it requires an app credential permission that will grant specific permissions on your environment.
+
+You can manually create an app credential and attach it to a profile or generate an initial one using the UI that will apply to the namespace where it's being created (and children).
+
+In the apoctl page, under _Configure apoctl_, copy and paste the generated command on the same system where you installed the apoctl binary.
+
+image::images/apoctl-03.png[width=500,align="center"]
 
 == apoctl basics
 `apoctl` provides the following main commands:
