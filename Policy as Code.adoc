@@ -1,4 +1,4 @@
-= Policy as Code
+= Microsegmentation as Code
 Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 26, 2022:
 :toc:
 :toc-title:
