@@ -6,7 +6,7 @@ Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, May 3, 2022:
 
 Prisma Cloud Identity Based Microsegmentation allows users a single pane of glass where they can monitor and analyze network traffic for on-prem, cloud and container based environments.
 
-The different analytics and views are explained in this chapter.
+The different analytics and views capabilities are explained in this chapter.
 
 === App Dependency Map
 
