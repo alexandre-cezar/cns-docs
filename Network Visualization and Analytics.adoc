@@ -8,7 +8,7 @@ Prisma Cloud Identity Based Microsegmentation allows users a single pane of glas
 
 The different analytics and views capabilities are explained in this chapter.
 
-=== App Dependency Map
+=== [App Dependency Map](https://github.com/alexandre-cezar/cns-docs/blob/main/App%20Dependency%20Map.adoc)
 
 === Application Insights
 
