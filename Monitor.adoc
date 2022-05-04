@@ -3,15 +3,19 @@ Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, May 3, 2022:
 
 When required, Prisma Cloud Identity Based Microsegmentation allows users to investigate events and to understand the state of objects, like Processing Units and Rulesets.
 
-The different capabilities are explained in this chapter.
+The different logging and monitoring capabilities are explained in this chapter.
 
-== Flow Logs
+== Log Types
 
-== Event Logs
+=== Flow Logs
 
-== DNS Logs
+=== Event Logs
 
-== Connection Exceptions
+=== DNS Lookup Logs
+
+=== Enforcer Logs
+
+=== Connection Exceptions
 
 == Monitoring Enforcers
 
