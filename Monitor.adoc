@@ -7,7 +7,7 @@ The different logging and monitoring capabilities are explained in this chapter.
 
 == Log Types
 
-=== (https://github.com/alexandre-cezar/cns-docs/blob/main/Flow%20Logs.adoc)[Flow Logs]
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/Flow%20Logs.adoc[Flow Logs]
 
 === Event Logs
 
