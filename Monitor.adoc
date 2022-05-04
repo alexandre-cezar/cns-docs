@@ -1,0 +1,29 @@
+= Monitor
+Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, May 3, 2022:
+
+When required, Prisma Cloud Identity Based Microsegmentation allows users to investigate events and to understand the state of objects, like Processing Units and Rulesets.
+
+The different capabilities are explained in this chapter.
+
+== Flow Logs
+
+== Event Logs
+
+== DNS Logs
+
+== Connection Exceptions
+
+== Monitoring Enforcers
+
+== Monitoring Processing Units
+
+== System Activities
+
+== Rulesets
+
+== Using Alerts
+
+== Syslog
+
+== Using Prisma Cloud RQL to investigate flow logs
+
