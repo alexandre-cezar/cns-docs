@@ -189,7 +189,8 @@ Manages Aporeto Statistics APIs +
 === update
 Updates apoctl to a specific version
 
-Options: +
+
+=== General Command Options: +
 -A, --api string -> Server API URL. (default points to the Prisma Cloud region API GW ) +
 
 --api-cacert string -> Path to the CA to use for validating api endpoint. +
