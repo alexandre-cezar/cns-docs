@@ -5,18 +5,27 @@ Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 26, 2022:
 :toclevels: 4
 :icons: font
 
+In many DevOps led environments, the CI/CD is the source of truth for all deployments. This ensures immutability and make it easier for application owners and security teams alike to find and fix drift between staging and prod environments.
+
+In such environments, users want to deploy their applications with all rulesets in place in order for applications to be microsegmented at their very deployment.
+
+This chapter covers the steps required to integrate Prisma Cloud Identity based microsegmentation with your CI/CD tool of choice and provides guidance on what the best practices are and working examples.
+
 == Best Practices
 
 === Store the app credentials securely
+
 A secret store enables applications and users to store and use several types of secret/key data. It's important to ensure the confidentiality of your information.
 
 As app credentials use certificates to authenticate with the console, it becomes important to store them securely and as such, we recommend that you use a secret store to store them.
 
 === Use Environment Variables
+
 Some variables (like namespaces and the credential itself) must be known to all the jobs that interact with the microsegmentation console. To make it easier, we recommend that you create environment variables that are known to your entire pipeline, otherwise you will need to export them on every job that interacts with the microsegmentation console.
 
 
 === Store your configuration as objects
+
 You can use apoctl commands to create and delete objects and while this may be ok but it is not something we recommend at scale.
 To create repeatable configurations that can be reused by different DevOps teams is the real goal and as such, we support two types of configuration files (json and yaml).
 
@@ -31,7 +40,7 @@ You can use the example provided to your specific platform and a starting point 
 === Platform Independent Tasks
 
 * Step1 -> Download apoctl +
-Follow the instructions https://www[here] to download and configure the apoctl client to your platform of choice.
+Follow the instructions https://github.com/alexandre-cezar/cns-docs/blob/main/apoctl.adoc[here] to download and configure the apoctl client to your platform of choice.
 
 * Step2 -> Generate your app credentials
 In your console, navigate to your namespace and click on the key icon, in the bottom left of the page
