@@ -1,0 +1,9 @@
+= Management Tasks
+Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, May 4, 2022:
+:toc:
+:toc-title:
+:icons: font
+
+=== Upgrading Enforcers
+
+=== Importing/Exporting Configuration
