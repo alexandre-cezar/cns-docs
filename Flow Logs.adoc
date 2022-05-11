@@ -40,7 +40,7 @@ The complete list of flow log fields is provided below
 | "Unique Flow ID"
 
 | "action"
-| "Resulting Ruleset Action
+| "Resulting Ruleset Action"
 
 | "dropReason"
 | "Reported reason for a flow to be rejected"
@@ -156,10 +156,14 @@ image::images/flow-logs-08.png[width=300,align="center"]
 
 image::images/flow-logs-09.png[width=300,align="center"]
 
-* Flow Analysis -> When a flow matches a source of destination that is not a Processing Unit or External Network _somewhere_, this action allows you to create an External Network using the flow report information
+* Flow Analysis -> When a flow matches a source of destination that is not a Processing Unit or External Network _somewhere_, this action allows you to create an External Network using the FQDN/IP reported by the Enforcer
 
 image::images/flow-logs-10.png[width=300,align="center"]
 
-* Create a Ruleset Policy -> When a flow matches the default implicit policy, this action will be visible, allowing you to create rulesets to explicitly allow or reject the traffic.
-
+* Create a Ruleset Policy -> When a flow matches the default implicit policy, this action will be visible, allowing you to create rulesets to explicitly allow or reject the traffic matching the flow. +
 The ruleset is automatically configured by Prisma Cloud (but not automatically created).
+
+[IMPORTANT]
+Flows matching _somewhere_ do not offer the "Create a Ruleset Policy" action. +
+Create an External Network first.
+

@@ -21,11 +21,11 @@ The different logging and monitoring capabilities are explained in this chapter.
 
 == Monitoring Processing Units
 
-== System Activities
+== Monitoring System Activities
 
-== Rulesets
+== Monitoring Rulesets
 
-== Using Alerts
+== Enforcer Alarms
 
 == Syslog
 

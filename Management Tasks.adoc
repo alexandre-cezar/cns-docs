@@ -7,3 +7,5 @@ Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, May 4, 2022:
 === Upgrading Enforcers
 
 === Importing/Exporting Configuration
+
+=== Managing Certificates

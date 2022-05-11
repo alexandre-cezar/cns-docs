@@ -1,0 +1,95 @@
+= Event Logs
+Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, May 11, 2022:
+:toc:
+:toc-title:
+:icons: font
+
+Event Logs are generated when an Enforcer event is triggered.
+
+To monitor/investigate Event Logs, navigate to Logs/Event Logs
+
+The page will present several options as we can see below,
+
+image::images/event-logs-1.png[width=500,align="center"]
+
+To note:
+
+* Search Bar -> Allows users to create queries to search for specific events.
+
+* Recursive -> Enable/Disable visualization of events from child namespaces
+
+* Time Range button -> Enable/Disable the timeline view
+
+* Column selector -> Selects the specific log fields you want to visualize
+
+* Time View Box -> Selects the time range you want to inspect
+
+* Save button -> Allows you to Save/Apply/Delete queries
+
+== Event Log details
+The data view allows you to investigate and analize all content in an event log
+
+image::images/event-logs-2.png[width=500,align="center"]
+
+Different fields can be selected for visualization, depending on your preference.
+
+The complete list of event log fields is provided below
+
+|===
+|Field name | What it means?
+
+| "ID"
+| "Unique Event ID"
+
+| "category"
+| "Event Type"
+
+| "content"
+| "Event description"
+
+| "level"
+| "Event Severity"
+
+| "namespace"
+| "Namespace where the event was generated"
+
+| "opaque"
+| "Additional event details"
+
+| "targetID"
+| "IF of the object related to the event"
+
+| "targetIdentity"
+| "Type of the object associated with the event "
+
+| "timestamp"
+| "Event timestamp",
+
+| "title"
+| "Event summary",
+
+|===
+
+== Searching Logs
+Creating specific search is as simple as clicking on an interesting field, and it will automatically be added to your query. You can continue selecting fields to match the exact traffic you are interested in. +
+
+You can also manually select the fields and add the values directly in the search bar.
+
+[TIP]
+If you hold the _shift_ key before selecting a field, it will be added as a _negation_ to your query
+
+== Using Saved Queries
+Once you create a query that may be reused in the future, you can save it and reapply it later.
+
+image::images/event-logs-3.png[width=500,align="center"]
+
+For that, simply click the _Save_ button, provide a name to your Search and the query will be added to your collection
+
+image::images/event-logs-4.png[width=300,align="center"]
+
+You can visit this anytime in the future to reapply your saved queries or delete them.
+
+image::images/event-logs-5.png[width=500,align="center"]
+
+[WARNING]
+Saved queries are saved locally in your browser. They may appear differently in other devices
