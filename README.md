@@ -15,4 +15,4 @@
 * Investigating Incidents
 * [Management tasks](https://github.com/alexandre-cezar/cns-docs/blob/main/Management%20Tasks.adoc)
 * Troubleshooting
-* [Advanced Use Cases](https://github.com/alexandre-cezar/cns-docs/blob/main/Advanced%20Topics.adoc)
+* [Advanced Use Cases](https://github.com/alexandre-cezar/cns-docs/blob/main/Advanced%20Use%20Cases.adoc)
