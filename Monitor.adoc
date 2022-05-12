@@ -13,7 +13,7 @@ The different logging and monitoring capabilities are explained in this chapter.
 
 === https://github.com/alexandre-cezar/cns-docs/blob/main/DNS%20Lookup%20Logs.adoc[DNS Lookup Logs]
 
-=== Enforcer Logs
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/Enforcer%20Logs.adoc[Enforcer Logs]
 
 === Connection Exceptions
 
@@ -30,4 +30,3 @@ The different logging and monitoring capabilities are explained in this chapter.
 == Syslog
 
 == Using Prisma Cloud RQL to investigate flow logs
-
