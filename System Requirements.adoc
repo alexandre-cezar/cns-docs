@@ -58,6 +58,9 @@ Before enforcing traffic controls, create a set of network rulesets that allows 
 - *SSH*: tcp/22
 - *RDP/Windows Remote Management*: tcp/3389, tcp/5986
 
+*Host Requirements* +
+As a minimum, we recommend Enforcers to be installed on systems with 2vCPUs and 4GB RAM.
+
 *Supported Windows Versions* +
 You can deploy the Enforcer on hosts running the following supported Windows versions.
 
