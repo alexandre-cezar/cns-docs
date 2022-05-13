@@ -167,6 +167,29 @@ Make sure the AKS cluster is running the Azure CNI
 
 ===== Install Enforcers on EKS clusters
 ===== Install Enforcers on GKE clusters
+* Step 1 - Navigate to the group Namespace where you want to deploy the Enforcer and once there, click on the Agent/Deploy page. +
+
+* Step 2 - Select Daemonset and under ClusterType, select GKE. Select the CLI Tool Version (the Host OS where the deployment will be executed) and your preferred Installation Mode.
+
+image::images/enforcer-gke-1.png[width=500,align="center"]
+
+* Step 3 - Copy the resulting installation script and use it to install the Enforcer on your GKE cluster.
+
+image::images/enforcer-gke-2.png[width=300,align="center"]
+
+* Step 4 [yaml only] - The resulting script will generate two files. +
+- enforcerd-<version>.yaml - Enforcer deployment file
+- namespace-secret-<version>.yaml - Enforcer credential. +
+
+Install the namespace-secret file first, then move to deploy the Enforcer, by running the command _kubectl apply -f <yaml file name>_
+
+After the installation is done, you can visualize the Enforcer pods by running the command _kubectl get pods -n aporeto_
+
+image::images/enforcer-gke-21.png[width=350,align="center"]
+
+[WARNING]
+Make sure that intra-node-visibility is disabled for the cluster.
+Make sure that your cluster has CNI enabled.
 ===== Install Enforcers on Openshift clusters
 ===== Install Enforcers on Tanzu Kubernetes Grid
 ===== Install Enforcers on Standard Kubernetes
