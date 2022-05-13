@@ -184,9 +184,6 @@ Install the namespace-secret file first, then move to deploy the Enforcer, by ru
 
 After the installation is done, you can visualize the Enforcer pods by running the command _kubectl get pods -n aporeto_
 
-[WARNING]
-Make sure the AKS cluster is running the Azure CNI
-
 ===== Install Enforcers on GKE clusters
 * Step 1 - Navigate to the group Namespace where you want to deploy the Enforcer and once there, click on the Agent/Deploy page. +
 
