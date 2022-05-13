@@ -166,6 +166,27 @@ image::images/install-enforcer-11.png[width=350,align="center"]
 Make sure the AKS cluster is running the Azure CNI
 
 ===== Install Enforcers on EKS clusters
+* Step 1 - Navigate to the group Namespace where you want to deploy the Enforcer and once there, click on the Agent/Deploy page. +
+
+* Step 2 - Select Daemonset and under ClusterType, select EKS. Select the CLI Tool Version (the Host OS where the deployment will be executed) and your preferred Installation Mode.
+
+image::images/enforcer-eks-1.png[width=500,align="center"]
+
+* Step 3 - Copy the resulting installation script and use it to install the Enforcer on your EKS cluster.
+
+image::images/enforcer-eks-2.png[width=300,align="center"]
+
+* Step 4 [helm only] - The resulting script will generate a scipt and a folder. +
+- namespace-secret-<version>.yaml - Enforcer credential
+- prisma-enforcer - Enforcer helm chart for the deployment. +
+
+Install the namespace-secret file first, then move to deploy the Enforcer, by running the commands _kubectl apply -f <namespace-secret-<version>.yaml>_ _helm install prisma-enforcer -n aporeto <helm chart path>_
+
+After the installation is done, you can visualize the Enforcer pods by running the command _kubectl get pods -n aporeto_
+
+[WARNING]
+Make sure the AKS cluster is running the Azure CNI
+
 ===== Install Enforcers on GKE clusters
 * Step 1 - Navigate to the group Namespace where you want to deploy the Enforcer and once there, click on the Agent/Deploy page. +
 
@@ -190,6 +211,7 @@ image::images/enforcer-gke-21.png[width=350,align="center"]
 [WARNING]
 Make sure that intra-node-visibility is disabled for the cluster.
 Make sure that your cluster has CNI enabled.
+
 ===== Install Enforcers on Openshift clusters
 ===== Install Enforcers on Tanzu Kubernetes Grid
 ===== Install Enforcers on Standard Kubernetes
