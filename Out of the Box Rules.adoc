@@ -58,5 +58,5 @@ Out of box rules are stored in a centralized Github repository as yaml file defi
 
 * Step 2 - To install a ruleset, run the following apoctl command:
 
-`#apoctl api import -f <template file> -n /<namespace>#
+`#apoctl api import -f <template file> -n /<namespace>#`
 
