@@ -4,7 +4,7 @@ Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, May 13, 2022:
 :toc-title:
 :icons: font
 
-Connection Exceptions are generated when Enforcers try to establish a session between two resources based on their own rulesets and the session is dropped due to another Enforcer on a different namespace is blocking it or because an external device is interfering with the identity certificate or dropping the session.
+Connection Exceptions are generated when Enforcers try to establish a session between two resources based on their own rulesets and the session is dropped due to another Enforcer on a different namespace to have a ruleset rejecting the flow or because an external device is interfering with the identity certificate or dropping the session.
 
 To monitor/investigate Connection Exceptions, navigate to Logs/Connection Exceptions
 
