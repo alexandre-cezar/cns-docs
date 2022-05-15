@@ -1,4 +1,4 @@
-= Enforcer architecture
+= How Enforcers work?
 Alexandre Cezar <acezar@paloaltonetworks.com>, April 4, 2022:
 :toc:
 :toc-title:
@@ -13,29 +13,40 @@ Kernel modules are compiled software components that can be inserted into the ke
 
 The official kernel itself is extensively tested across broad use cases, while these modules are often created by individual companies with far fewer resources and far more narrow test coverage. +
 
-Because kernel modules have unrestricted system access, a security flaw in them is a system wide exposure. A single unchecked buffer or other error in such a low level component can lead to the complete compromise of an otherwise well-designed and hardened system. Further, custom kernel modules can introduce significant stability risks to a system. +
+Because kernel modules have unrestricted system access, a security flaw in them creates a system wide exposure. A single unchecked buffer or other error in such a low level component can lead to the complete compromise of an otherwise well-designed and hardened system. Further, custom kernel modules can introduce significant stability risks to a system. +
 
 For these reasons, many modern operating systems designed for cloud native apps, like Google Container-Optimized OS, explicitly prevent the usage of kernel modules.
 
-=== Enforcer tasks
-Enforcers, once deployed in a Host, perform 4 key steps: +
+== Software Architecture
 
-* Register itself into the Prisma Cloud backend and gets an Enforcer certificate. Backend activates the Enforcer.
+==== Agent Manager
+When you execute an installation or upgrade, you are actually installing the Agent Manager process, which in turn manages the Enforcer binary. +
+The Agent Manager connects to the backend and based on the policies you have in place, will download the correct Enforcer process for your host.
 
-* Defines a nfqueue for the traffic to be processed.
+==== Enforcer
+Responsible for the micro segmentation tasks, such as the cryptographic operations and the rulesets evaluation and enforcement.
+
+== Enforcer tasks
+An Enforcer, once deployed in a Host, always perform 4 key steps: +
+
+* Register itself into the Prisma Cloud backend and gets an Enforcer certificate. +
+Backend activates the Enforcer.
+
+* Inserts itself in a nfqueue for the traffic to be inspected.
 
 * Generate a Cryptographic Identity for the Host OS and all containers/pods in that host
 
 * Authenticates/Authorizes/Report new sessions
 
-Let's dive in into these steps in more details:
+Let's look into these steps in more details:
 
-== Enforcer Registering/Activation
+== Enforcer Registration/Activation
 Enforcers are always installed on specific Microsegmentation namespaces. +
 Once installed, Enforcers use mtLS to establish a connection with the console and register themselves on that namespace.
 Once registered and activated, the console issues an Enforcer certificate (EC DSA 256bit) that authenticates the Enforcer on every operation it does.
 
 == nfqueue insertion
+TBD
 
 == Cryptographic Identity Generation
 Enforcers use a set of information to generate a cryptographic identity for a processing unit.
@@ -52,14 +63,21 @@ Depending on the processing unit, Enforcers use information from: +
 To generate a processing unit identity, Enforcers generate ephemeral EC DSA key pairs that are signed by the Prisma Cloud Microsegmentation backend. +
 These keys are then used to generate further additional ephemeral keys (ECDSA using NIST P-256 curve with SHA-256) that only have a 5 min lifespan.
 
-For Cloud instances, Enforcers will check for updates in metadata every 60 seconds.
+[TIP]
+For Cloud instances, Enforcers will check for updates in its metadata every 300 seconds +
+(only for Host Processing Units). +
+
+For containers, to ensure immutability, Enforcers only ingests its metadata during the container start-up. In this context, all changes are ensured to come only from a trusted CI/CD pipeline.
 
 [IMPORTANT]
 ====
 The Enforcer and Processing Units keys are never stored in disk. An Enforcer restart will generate new Enforcer and Processing Unit keys
 ====
 
-=== Session Authentication/Authorization
+== TCP Fast Open Probes
+TBD
+
+== Session Authentication/Authorization
 All sessions that originate from a workload that is protected by an Enforcer will carry the cryptographic identity - as long as the destination is also protected by an Enforcer. +
 This ensures that all sessions are mutually authenticated. Additional nonces are used to prevent MITM and replay attacks.
 
@@ -90,3 +108,6 @@ Enforcers never perform UDP authentication for DNS traffic.
 
 ==== Are ICMP flows authenticated as well?
 ICMP flows are not authenticated, but they are authorized through rulesets. In the ICMP case, there's no identity, so ICMP policies only consider ips or fqdns.
+
+== Headless Mode
+TBD
