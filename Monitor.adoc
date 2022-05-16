@@ -19,7 +19,7 @@ The different logging and monitoring capabilities are explained in this chapter.
 
 == Monitoring Enforcers
 
-== Monitoring Processing Units
+== https://github.com/alexandre-cezar/cns-docs/blob/main/Monitoring%20Processing%20Units.adoc[Monitoring Processing Units]
 
 == Monitoring System Activities
 
