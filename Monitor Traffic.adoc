@@ -52,6 +52,6 @@ You can also use _policy as code_ to automate the policy creation through CI/CD 
 
 After creating the required external networks and rulesets and modifying the Namespace Implicit Default Action to Reject, your application flow should be similar to this:
 
-image::images/monitor_flows_after.png[width=1000,align="center"]
+image::images/monitor_flows_after.png[width=500,align="center"]
 
 Now, all required flows for the application to work are being accepted by a microsegmentation ruleset, while all other flows are being rejected by the implicit namespace policy.
