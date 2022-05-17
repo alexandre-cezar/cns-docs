@@ -39,11 +39,15 @@ If you need to exclude a specific PU(s) from ever being monitored/enforced by a 
 This group of settings define how Enforcers define where an identity is expected to be sent/received, and it also defines networks and interfaces that needs to be excluded from microsegmentation +
 
 - Managed TCP Networks +
-It defines what CIDRs that will be policed by Enforcers for TCP related traffic and therefore where identity packets are expected. By default, the following networks are automatically created. +
-_10.0.0.0/8_, _100.64.0.0/10_, _127.0.0.0/8_, _172.16.0.0/12_, _192.168.0.0/16_, _198.18.0.0/15_
+It defines what CIDRs that will be policed by Enforcers for TCP related traffic and therefore where identity packets are expected. +
+By default, the following networks are automatically created. +
+`10.0.0.0/8`, `100.64.0.0/10`, `127.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`, `198.18.0.0/15`
 
 - Managed UDP Networks +
 It defines what CIDRs that will be policed by Enforcers for UDP related traffic and therefore where identity packets are expected. By default, Enforcers do not add identity to UDP packets. +
+
+[TIP]
+You can exclude an IP or CIDR from a target network range by adding the exclamation sign `!` in front of it
 
 - Excluded Networks +
 It defines what CIDRs will be completed ignored by Enforcers (no flow reporting, no identity, no rulesets will be applied). By default, no network is excluded from an Enforcer Profile. +

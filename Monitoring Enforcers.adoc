@@ -1,4 +1,51 @@
 = Monitoring Enforcers
 Alexandre Cezar <acezar@paloaltonetworks.com>, May 16, 2022:
 
-Monitor 
+You can monitor Enforcers by navigating to a namespace and opening the Enforcers tab.
+
+The page will present several options as we can see below,
+
+image::images/monitor-enforcer-1.png[width=500,align="center"]
+
+To note:
+
+* Search Bar -> Allows users to create queries to search for specific events.
+
+* Recursive -> Enable/Disable visualization of events from child namespaces
+
+* Search -> Enable/Disable the Search toolbar
+
+* Order -> Selects how you want to order by object
+
+* Download as a CSV -> Allows you to download the entire list of objects as a CSV file
+
+* Save button -> Allows you to Save/Apply/Delete queries
+
+== Enforcer  details
+You can select and expand on a single Enforcer and look at its status and tags
+
+image::images/monitor-enforcer-2.png[width=500,align="center"]
+
+And you can click on its details icon to observe additional information, such as the associate Enforcer Profile and the list of Processing Units attached to the Enforcer
+
+image::images/monitor-enforcer-3.png[width=500,align="center"]
+
+== Searching Processing Units
+You can quickly create filters to find a specific Enforcer.
+
+Some commonly used filters:
+
+* Operational Status -> (provides a selection of PUs based on their statuses)
+
+image::images/monitor-enforcer-4.png[width=500,align="center"]
+
+* Name -> (provides a selection of PUs based on their names)
+
+image::images/monitor-enforcer-5.png[width=500,align="center"]
+
+* Tag -> (provides a selection of PUs based on their tags)
+
+image::images/monitor-enforcer-6.png[width=500,align="center"]
+
+== Reporting Enforcers
+You can create a filter (optional) to match specific Processing Units and then use the _Download CSV_ file to export the results

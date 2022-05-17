@@ -29,7 +29,6 @@ The next consideration is where to deploy the Enforcer. Enforcers monitor the en
 Also, make sure that network services like DHCP (if used),  NTP and DNS are working in the resources you want to deploy the Enforcers.
 
 === List your environments
-
 An environment is a logical grouping of hosts, such as a Kubernetes cluster or a set of instances that supports the execution of your app workload. +
 
 Here, the term "environment" is loosely defined because its scope can differ from organization to organization. +
@@ -47,7 +46,8 @@ These attributes can map your Prisma Cloud Microsegmentation namespaces, platfor
 
 image::images/planning_tags.png[width=600,align="center"]
 
-Additionally, if you require more granularity in your policies, use processing unit attributes such as _$name_ or _app:host:fqdn=_ for hosts and _$image_ for containers.
+Additionally, if you require more granularity in your policies rather matching all workloads in a given namespace, we recommend using processing unit attributes such as _$name_ or _app:host:fqdn=_ for hosts and _$image_ for containers. +
+This will effectively match only specific hosts or pods you want to.
 
 But if you're planning to use custom defined identities, it's important to align what they will be with the teams who manage the cloud resources (eg. DevOps, SRE, Cloud Admins) as application owners need to make sure that these attributes are added to the resources in their pipeline. The best practice is to keep them easy to understand, reflect the application components and to use attributes that make sense from a business or security perspective.
 
@@ -81,6 +81,13 @@ _Tenant -> Cloud Account -> Group_
 In the example below we can see a Namespace hierarchy template and the namespace which are automatically created by Prisma Cloud (blue) and the namespaces created by the CNS Administrators (yellow)
 
 image::images/planning_namespace_example.jpeg[width=600,align="center"]
+
+=== Customize the Enforcer Profile
+Enforcers use the Managed Networks setting under the Enforcer Profile to determine which networks should the identity be sent and which ones should not. +
+Many times customers have resources deployed on a public network or an unprotected resource deployed in an IP that matches a Managed Network CIDR. +
+The best practice is to review this setting and customize it by adding additional networks as need or by introducing exceptions (IPs that are included in a Managed TCP Network CIDR but still aren't protected by an Enforcer).
+
+You can find additional information about Enforcer Profiles https://github.com/alexandre-cezar/cns-docs/blob/main/Enforcers.adoc#enforcer-profile[here]
 
 === Deploy Enforcers
 Deploying Enforcers in the right namespace makes it easier for CNS Administrators to make sure they have the proper application visibility and are ingesting the proper resource metadata. We do not recommend that you aggregate all Enforcers in a single namespace and we do not recommend that you deploy Enforcers in the default namespace (root).
@@ -123,7 +130,6 @@ If you prefer to refine your lists and add only the exact CIDR for your cloud su
 A good practice is to also add on-prem Data Center subnets, static public IPs of resources where enforcers will be installed, specific network services suchs as external DNS resolvers, DHCP, NTP servers and Load Balancer IPs that front-end your applications, in case they exist.
 
 === Resolve application dependencies
-
 After obtaining application visibility, we need to translate the application and business requirements into identity based microsegmentation policies.
 
 A best practice is to have a separated environment (staging or dev) where you can deploy your applications and analyze what happens during the entire application lifecycle but if this is not possible, then make sure you can capture the entire application lifecycle in production (startup, runtime and termination) and that you are using a time range that encompasses all these phases during your analysis. This will ensure that all relevant policies are in place and that Enforcers will not block a flow that is required.
