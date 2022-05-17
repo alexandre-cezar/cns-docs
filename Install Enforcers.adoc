@@ -25,7 +25,7 @@ image::images/install_enforcer-1.png[width=500,align="center"]
 
 * Step 3 (optional) - If you want to add custom tags to your Enforcer in order to leverage them in rulesets, add them under tags.
 
-image::images/install_enforcer-2.png[width=300,align="center"]
+image::images/install_enforcer-2.png[width=250,align="center"]
 
 * Step 4 - Copy the resulting installation script and use it to install the Enforcer on your workload.
 
@@ -41,7 +41,7 @@ image::images/install_enforcer-4.png[width=500,align="center"]
 
 * Step 3 (optional) - If you want to add custom tags to your Enforcer in order to leverage them in rulesets, add them under tags.
 
-image::images/install_enforcer-2.png[width=300,align="center"]
+image::images/install_enforcer-2.png[width=250,align="center"]
 
 * Step 4 - Copy the resulting installation script and use it to install the Enforcer on your workload.
 
@@ -74,7 +74,7 @@ image::images/cloud-registration-1.png[width=550,align="center"]
 
 * Step 3 - Under Auto-registration, selects Azure as the cloud provider and under _Claims_, add the string _subscriptions=<your Azure subscription>_ or _tenantid=<your Azure tenant id>_ and finish creating the Auto-Registration policy.
 
-image::images/cloud-registration-3.png[width=450,align="center"]
+image::images/cloud-registration-3.png[width=350,align="center"]
 
 ==== Create Auto-Registration for GCP projects
 * Step 1 - Obtain your GCP project ID
@@ -85,7 +85,7 @@ image::images/cloud-registration-1.png[width=550,align="center"]
 
 * Step 3 - Under Auto-registration, selects GCP as the cloud provider and under _Claims_, add the string _projectid=<your GCP project ID>_ and finish creating the Auto-Registration policy.
 
-image::images/cloud-registration-4.png[width=400,align="center"]
+image::images/cloud-registration-4.png[width=350,align="center"]
 
 [NOTE]
 Cloud Auto Registration is available on AWS, Azure and GCP. For other public cloud providers, use the Standard installation method.
@@ -120,7 +120,7 @@ image::images/install_enforcer-6.png[width=500,align="center"]
 
 * Step 3 - Copy the resulting installation script and use it to install the Enforcer on your workload.
 
-image::images/install_enforcer-7.png[width=300,align="center"]
+image::images/install_enforcer-7.png[width=400,align="center"]
 
 ==== Windows
 
@@ -132,7 +132,7 @@ image::images/install_enforcer-9.png[width=500,align="center"]
 
 * Step 3 - Copy the resulting installation script and use it to install the Enforcer on your workload.
 
-image::images/install_enforcer-10.png[width=300,align="center"]
+image::images/install_enforcer-10.png[width=400,align="center"]
 
 ==== Kubernetes
 Microsegmentation provides a close integration with Kubernetes and OpenShift to make it easy to control and monitor clusters composed of Linux hosts. +
@@ -146,11 +146,11 @@ apoctl, yaml or helm charts
 
 * Step 2 - Select Daemonset and under ClusterType, select AKS. Select the CLI Tool Version (the Host OS where the deployment will be executed) and your preferred Installation Mode.
 
-image::images/enforcer-aks-1.png[width=500,align="center"]
+image::images/enforcer-aks-1.png[width=400,align="center"]
 
 * Step 3 - Copy the resulting installation script and use it to install the Enforcer on your AKS cluster.
 
-image::images/enforcer-aks-2.png[width=300,align="center"]
+image::images/enforcer-aks-2.png[width=400,align="center"]
 
 * Step 4 [yaml only] - The resulting script will generate two files. +
 - enforcerd-<version>.yaml - Enforcer deployment file
@@ -160,7 +160,7 @@ Install the namespace-secret file first, then move to deploy the Enforcer, by ru
 
 After the installation is done, you can visualize the Enforcer pods by running the command _kubectl get pods -n aporeto_
 
-image::images/install-enforcer-11.png[width=350,align="center"]
+image::images/install-enforcer-11.png[width=300,align="center"]
 
 [WARNING]
 Make sure the AKS cluster is running the Azure CNI
@@ -174,7 +174,7 @@ image::images/enforcer-eks-1.png[width=500,align="center"]
 
 * Step 3 - Copy the resulting installation script and use it to install the Enforcer on your EKS cluster.
 
-image::images/enforcer-eks-2.png[width=300,align="center"]
+image::images/enforcer-eks-2.png[width=400,align="center"]
 
 * Step 4 [helm only] - The resulting script will generate a scipt and a folder. +
 - namespace-secret-<version>.yaml - Enforcer credential
@@ -193,7 +193,7 @@ image::images/enforcer-gke-1.png[width=500,align="center"]
 
 * Step 3 - Copy the resulting installation script and use it to install the Enforcer on your GKE cluster.
 
-image::images/enforcer-gke-2.png[width=300,align="center"]
+image::images/enforcer-gke-2.png[width=400,align="center"]
 
 * Step 4 [yaml only] - The resulting script will generate two files. +
 - enforcerd-<version>.yaml - Enforcer deployment file
@@ -203,7 +203,7 @@ Install the namespace-secret file first, then move to deploy the Enforcer, by ru
 
 After the installation is done, you can visualize the Enforcer pods by running the command _kubectl get pods -n aporeto_
 
-image::images/enforcer-gke-21.png[width=350,align="center"]
+image::images/enforcer-gke-21.png[width=300,align="center"]
 
 [WARNING]
 Make sure that intra-node-visibility is disabled for the cluster.
@@ -218,7 +218,7 @@ Enforcer tags are used when you want to create tags for the Enforcer itself. The
 In such cases, administrators can use Enforcer tags as a way to use custom tags on rulesets.
 Add them under the tags section during an Enforcer installation.
 
-image::images/install_enforcer-2.png[width=300,align="center"]
+image::images/install_enforcer-2.png[width=250,align="center"]
 
 === Install the api-server (k8s CRD operator)
 To install the api-server, add the `--install-aggregated-apiserver` flag as an argument during a K8s Enforcer installation.
@@ -242,7 +242,7 @@ Alternatively, you can enable host mode directly in the Prisma Cloud administrat
 
 image::images/enable-host-mode.png[width=500,align="center"]
 
-For additional information on how use the api-server to manage microsegmentation objects in K8s, please read this https://github.com/alexandre-cezar/cns-docs/blob/main/Host-Mode.adoc[document].
+For additional information on how use the api-server to manage microsegmentation objects in K8s, please check this https://github.com/alexandre-cezar/cns-docs/blob/main/Host-Mode.adoc[page].
 
 ==== Enable non-transparent proxy support
 Enforcers require access to Prisma Cloud in order to send telemetry data and receive updates and in some environments this can only be achieved through a non-transparent proxy.
