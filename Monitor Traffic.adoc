@@ -1,7 +1,6 @@
 = Monitor Network Traffic
 Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, April 5, 2022:
 
-
 One of the key aspects of microsegmentation is to make sure that all required flows of a given application are being properly allowed by a ruleset. Everything else should be considered as an exception (least privilege model).
 
 With this approach, it becomes easier for security teams to define alarms for guardrail violations and to investigate anomalies.
@@ -44,7 +43,7 @@ Flows also will have different colors and representations, depending on decision
 - Dashed Red - Flow was rejected by the Implicit Namespace policy
 - Orange - In a given time range, flows were reported both accepted and rejected (due to a policy change)
 
-Next step is to start creating https://xxx[External networks] and defining rulesets using https://xxx[Out of box rules] or https://xxx[Application Profiling], depending on your security requirements. +
+Next step is to start creating https://github.com/alexandre-cezar/cns-docs/blob/main/External%20Networks.adoc[External networks] and defining rulesets using https://github.com/alexandre-cezar/cns-docs/blob/main/Out%20of%20the%20Box%20Rules.adoc[Out of box rules] or https://github.com/alexandre-cezar/cns-docs/blob/main/Application%20Profiling.adoc[Application Profiling], depending on your security requirements. +
 
 [TIP]
 ====
