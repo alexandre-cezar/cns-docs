@@ -7,6 +7,4 @@ The different analytics and views capabilities are explained in this chapter.
 
 === https://github.com/alexandre-cezar/cns-docs/blob/main/App%20Dependency%20Map.adoc[App Dependency Map]
 
-=== Application Insights
-
 === https://github.com/alexandre-cezar/cns-docs/blob/main/Flow%20Logs.adoc[Flow Logs]
