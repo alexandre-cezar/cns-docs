@@ -29,6 +29,6 @@ The different logging and monitoring capabilities are explained in this chapter.
 
 == Enforcer Alarms
 
-== Syslog
+== https://github.com/alexandre-cezar/cns-docs/blob/main/Using%20Syslog.adoc[Syslog]
 
 == Using Prisma Cloud RQL to investigate flow logs
