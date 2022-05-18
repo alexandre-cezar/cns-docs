@@ -210,6 +210,20 @@ Make sure that intra-node-visibility is disabled for the cluster.
 Make sure that your cluster has CNI enabled.
 
 ===== Install Enforcers on Openshift clusters
+* Step 1 - Navigate to the group Namespace where you want to deploy the Enforcer and once there, click on the Agent/Deploy page. +
+
+* Step 2 - Select Daemonset and under ClusterType, select OCP4. Select the CLI Tool Version (the Host OS where the deployment will be executed) and your preferred Installation Mode.
+
+image::images/enforcer-ocp4-1.png[width=500,align="center"]
+
+* Step 3 - Copy the resulting installation script and use it to install the Enforcer on your OCP4 cluster.
+
+image::images/enforcer-ocp4-2.png[width=400,align="center"]
+
+After the installation is done, you can visualize the Enforcer pods by running the command _kubectl get pods -n aporeto_
+
+image::images/enforcer-ocp4-21.png[width=300,align="center"]
+
 ===== Install Enforcers on Tanzu Kubernetes Grid
 ===== Install Enforcers on Standard Kubernetes
 
