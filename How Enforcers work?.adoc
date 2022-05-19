@@ -19,11 +19,11 @@ For these reasons, many modern operating systems designed for cloud native apps,
 
 == Software Architecture
 
-==== Agent Manager
+=== Agent Manager
 When you execute an installation or upgrade, you are actually installing the Agent Manager process, which in turn manages the Enforcer binary. +
 The Agent Manager connects to the backend and based on the policies you have in place, will download the correct Enforcer process for your host.
 
-==== Enforcer
+=== Enforcer
 Responsible for the micro segmentation tasks, such as the cryptographic operations and the rulesets evaluation and enforcement.
 
 == Enforcer tasks
