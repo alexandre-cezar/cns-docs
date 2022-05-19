@@ -25,7 +25,7 @@ The different logging and monitoring capabilities are explained in this chapter.
 
 === https://github.com/alexandre-cezar/cns-docs/blob/main/System%20Activities.adoc[System Activities]
 
-=== Rulesets
+=== https://github.com/alexandre-cezar/cns-docs/blob/main/Monitoring%20Rulesets.adoc[Rulesets]
 
 == Enforcer Alarms
 
