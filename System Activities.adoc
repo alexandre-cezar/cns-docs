@@ -74,7 +74,7 @@ You can also look at the activity data, by expanding the Data tab
 
 image::images/system-activities-4.png[width=300,align="center"]
 
-== Searching Acvitiies
+== Searching Activities
 Creating specific search is as simple as clicking on an interesting field, and it will automatically be added to your query. You can continue selecting fields to match the exact traffic you are interested in. +
 
 You can also manually select the fields and add the values directly in the search bar.
