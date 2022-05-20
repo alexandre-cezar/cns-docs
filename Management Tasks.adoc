@@ -4,8 +4,55 @@ Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, May 4, 2022:
 :toc-title:
 :icons: font
 
-=== Upgrading Enforcers
+Common operational tasks, besides rulesets, external networks and namespaces evolve around 3 additional topics:
 
-=== Importing/Exporting Configuration
+* Upgrade Enforcers
 
-=== Managing Certificates
+* Import/Export the configuration
+
+* Manage certificates
+
+Let's look into each topic in more details.
+
+== Upgrading Enforcers
+You can upgrade Enforcers in two ways:
+
+* Using the Microsegmentation Console
+
+* Using apoctl
+
+=== Upgrade Enforcers using the Microsegmentation Console
+
+Navigate to Agent/Enforcers and verify the Enforcer version by expanding its details
+
+image::images/upgrade-enforcer-1.png[width=500,align="center"]
+
+[TIP]
+You can identify if a new Enforcer version is available when the upgrade button appears for your Enforcers.
+
+You can select a single or multiple Enforcer by enabling the _multiselect_ option
+
+==== Single Enforcer upgrade
+
+image::images/upgrade-enforcer-2.png[width=500,align="center"]
+
+==== Multiple Enforcers upgrade
+
+image::images/upgrade-enforcer-3.png[width=500,align="center"]
+
+The UI will list the selected Enforcer(s) versions and the version you want to upgrade to (latest or a custom version) +
+
+image::images/upgrade-enforcer-4.png[width=350,align="center"]
+
+Once the started, Enforcers will briefly disconnect and their status will transition from "migration" to "connected"
+
+You can check at the Enforcer version, to verify that Enforcers are now in the desired version
+
+image::images/upgrade-enforcer-5.png[width=300,align="center"]
+
+=== Upgrade Enforcers using apoctl
+To upgrade an Enforcer using apoctl, run the command
+
+== Importing/Exporting the configuration
+
+== Managing Certificates
