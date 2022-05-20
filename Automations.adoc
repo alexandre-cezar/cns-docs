@@ -154,6 +154,5 @@ image::images/automations-08.png[width=300,align="center"]
 [IMPORTANT]
 Integrations and Automations are namespace specific and as such, multiple integrations and automations can be leveraged independent of each other, although propagation is supported from parent to children.
 
-== Advanced Automation using javascript
 
 
