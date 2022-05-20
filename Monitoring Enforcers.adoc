@@ -1,5 +1,8 @@
 = Monitoring Enforcers
 Alexandre Cezar <acezar@paloaltonetworks.com>, May 16, 2022:
+:toc:
+:toc-title:
+:icons: font
 
 You can monitor Enforcers by navigating to a namespace and opening the Enforcers tab.
 

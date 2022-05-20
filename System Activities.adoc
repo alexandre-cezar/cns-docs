@@ -1,5 +1,8 @@
 = System Activities
 Alexandre Cezar <acezar@paloaltonetworks.com>, May 18, 2022:
+:toc:
+:toc-title:
+:icons: font
 
 You can monitor user activities by navigating to a namespace and opening System Activities tab.
 
