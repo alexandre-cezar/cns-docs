@@ -36,7 +36,7 @@ image::images/authorizations-5.png[width=500,align="center"]
 
 image::images/authorizations-6.png[width=500,align="center"]
 
-For more details about roles and permissions, please read this [page]
+For more details about roles and permissions, please read this https://github.com/alexandre-cezar/cns-docs/blob/main/Roles%20and%20Permissions.adoc[page]
 
 == Creating Authorizations using apoctl
 To create an API Authorization using apoctl, use the command below as an example:
