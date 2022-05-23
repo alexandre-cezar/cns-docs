@@ -48,7 +48,7 @@ Once the upgrade process begun, Enforcers will briefly disconnect and its status
 
 image::images/upgrade-enforcer-6.png[width=250,align="center"]
 
-You can check again at the Enforcer version to confirm that they are now in the desired version.
+You can check again at the Enforcer version to confirm that it is now in the desired version.
 
 image::images/upgrade-enforcer-5.png[width=300,align="center"]
 
