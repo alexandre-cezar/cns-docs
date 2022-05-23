@@ -1,0 +1,5 @@
+= Roles and Permissions
+Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, May 22, 2022:
+
+The list of roles and permissions is provided below:
+
