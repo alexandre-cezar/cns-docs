@@ -44,7 +44,9 @@ The UI will list the selected Enforcer(s) versions and the version you want to u
 
 image::images/upgrade-enforcer-4.png[width=350,align="center"]
 
-Once the started, Enforcers will briefly disconnect and their status will transition from "migration" to "connected"
+Once the started, Enforcers will briefly disconnect and their status will transition from "disconnected migration running" back to "connected"
+
+image::images/upgrade-enforcer-6.png[width=250,align="center"]
 
 You can check at the Enforcer version, to verify that Enforcers are now in the desired version
 
@@ -52,6 +54,7 @@ image::images/upgrade-enforcer-5.png[width=300,align="center"]
 
 === Upgrade Enforcers using apoctl
 To upgrade an Enforcer using apoctl, run the command
+`apoctl enforcer switch-to --target-version <version> --confirm` at the target host.
 
 == Importing/Exporting the configuration
 
