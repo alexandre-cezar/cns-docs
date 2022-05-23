@@ -54,7 +54,7 @@ image::images/upgrade-enforcer-5.png[width=300,align="center"]
 
 === Upgrade Enforcers using apoctl
 To upgrade an Enforcer using apoctl, run the command
-`apoctl enforcer switch-to --target-version <version> --confirm` at the target host.
+`apoctl enforcer switch-to --target-version <version> -n <namespace> --confirm` to upgrade all Enforcers on that namespace. You can also point to a specific Enforcer ID if you want to upgrade just a single Enforcer.
 
 == Importing/Exporting the configuration
 
