@@ -56,6 +56,17 @@ image::images/upgrade-enforcer-5.png[width=300,align="center"]
 To upgrade an Enforcer using apoctl, run the command
 `apoctl enforcer switch-to --target-version <version> -n <namespace> --confirm` to upgrade all Enforcers on that namespace. You can also point to a specific Enforcer ID if you want to upgrade just a single Enforcer.
 
-== Importing/Exporting the configuration
+== Importing/Exporting configurations
+Importing and Exporting configuration is a common task if you implement microsegmentation using "policy as code" concepts.
+
+=== Exporting Configurations
+Select the namespace of interest, navigate to Manage/Data Management, select the objects you want to export, assign a label to the file and click on _Download_
+
+image::images/export-1.png[width=300,align="center"]
+
+=== Importing Configurations
+Navigate to Manage/Data Management, choose the namespace where you want to import the objects (if on a parent), select the file you want to import,  _Import_
+
+image::images/import-1.png[width=300,align="center"]
 
 == Managing Certificates
