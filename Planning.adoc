@@ -83,9 +83,9 @@ In the example below we can see a Namespace hierarchy template and the namespace
 image::images/planning_namespace_example.jpeg[width=600,align="center"]
 
 === Customize the Enforcer Profile
-Enforcers use the Managed Networks setting under the Enforcer Profile to determine which networks should the identity be sent and which ones should not. +
+Enforcers use the Managed Networks setting under the Enforcer Profile to determine which networks should the identity be sent and which ones it should not. +
 Many times customers have resources deployed on a public network or an unprotected resource deployed in an IP that matches a Managed Network CIDR. +
-The best practice is to review this setting and customize it by adding additional networks as need or by introducing exceptions (IPs that are included in a Managed TCP Network CIDR but still aren't protected by an Enforcer).
+The best practice is to review this setting and customize it by adding additional networks as need or by introducing exceptions (IPs that are included in a Managed TCP Network CIDR but aren't protected by an Enforcer).
 
 You can find additional information about Enforcer Profiles https://github.com/alexandre-cezar/cns-docs/blob/main/Enforcers.adoc#enforcer-profile[here]
 
