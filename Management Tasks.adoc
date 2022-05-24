@@ -69,4 +69,13 @@ Navigate to Manage/Data Management, choose the namespace where you want to impor
 
 image::images/import-1.png[width=300,align="center"]
 
+=== Exporting/Importing configurations using apoctl
+You can use `apoctl` to manage your configurations.
+
+You can export a configuration using the command `apoctl api export --label "<label>" -n <namespace> -f <filename>`
+
+You can import a configuration using the command `apoctl api import -f <filename> -n <namespace>`
+
+For additional options, please check the `apoctl` documentation.
+
 == Managing Certificates
