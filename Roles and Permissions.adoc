@@ -1,5 +1,571 @@
-= Roles and Permissions
+= User Roles and Permissions
 Alexandre Cezar <acezar@paloaltonetworks.com> 1.0, May 22, 2022:
 
-The list of roles and permissions is provided below:
+The list of user associated roles and their respective permissions are provided in the table below:
 
+|===
+|Role name | Authorizations | Description
+
+| "namespace.administrator"
+| *: [any]
+| Can manage everything in a namespace
+
+| "namespace.viewer"
+| *: [get] +
+apicheck: [post] +
+cloudendpoint: [get] +
+cloudgraph: [get post] +
+cloudnetworkinterface: [get] +
+cloudnetworkquery: [get] +
+cloudnetworksecurityruleset: [get] +
+cloudroutetable: [get] +
+cloudsubnet: [get] +
+cloudvpc: [get] +
+export: [post] +
+importrequest: [get put post] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+policygraph: [post] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post]
+|Can view everything in a namespace
+
+| "netsecops"
+| accessiblenamespace: [get] +
+cloudendpoint: [get] +
+cloudgraph: [get post] +
+cloudnetworkinterface: [get] +
+cloudnetworkquery: [get post] +
+cloudnetworksecurityruleset: [get] +
+cloudroutetable: [get] +
+cloudsnapshotaccount: [get post] +
+cloudsubnet: [get] +
+cloudvpc: [get] +
+cnssearch: [post] +
+cnssuggestion: [post] +
+| Prisma Cloud Role NetSecops
+
+| "namespace.contributor"
+| alarm: [get] +
+apicheck: [post] +
+claims: [get] +
+defaultenforcerversion: [get] +
+hit: [get] +
+importrequest: [post] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+pushsession: [get] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+tag: [get]
+| Role used when posting requests to another namespace(s) is required
+
+| "infrastructure.administrator"
+| activity: [get] +
+alarm: [get] +
+apiauthorizationpolicy: [any] +
+apicheck: [post] +
+app: [any] +
+appcredential: [any] +
+automation: [any] +
+automationtemplate: [get] +
+claims: [get] +
+defaultenforcerversion: [get] +
+dependencymap: [get] +
+discoverymode: [any] +
+enforcer: [any] +
+export: [post] +
+externalnetwork: [any] +
+hit: [get] +
+hookpolicy: [any] +
+httpresourcespec: [any] +
+import: [post] +
+importreference: [any] +
+importrequest: [post] +
+infrastructurepolicy: [any] +
+installedapp: [any] +
+ldapprovider: [any] +
+localca: [get] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacemappingpolicy: [any] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+networkaccesspolicy: [any] +
+networkrulesetpolicy: [any] +
+oidcprovider: [any] +
+pccprovider: [any] +
+policygraph: [post] +
+processingunit: [get] +
+pushsession: [get] +
+recipe: [get] +
+renderedpolicy: [get] +
+reportsquery: [post] +
+samlprovider: [any] +
+service: [any] +
+servicedependency: [any] +
+statsinfo: [post] +
+statsquery: [get post] +
+suggestedpolicy: [get] +
+tag: [get] +
+tokenscopepolicy: [any] +
+trustednamespace: [any] +
+|Allow namespace administration
+
+| "infrastructure.viewer"
+| activity: [get] +
+alarm: [get] +
+apiauthorizationpolicy: [get] +
+apicheck: [post] +
+app: [get] +
+appcredential: [get] +
+automation: [get] +
+automationtemplate: [get] +
+claims: [get] +
+defaultenforcerversion: [get] +
+dependencymap: [get] +
+discoverymode: [get] +
+enforcer: [get] +
+externalnetwork: [get] +
+hit: [get] +
+hookpolicy: [get] +
+httpresourcespec: [get] +
+importreference: [get] +
+infrastructurepolicy: [get] +
+installedapp: [get] +
+ldapprovider: [get] +
+localca: [get] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacemappingpolicy: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+networkaccesspolicy: [get] +
+networkrulesetpolicy: [get] +
+oidcprovider: [get] +
+pccprovider: [get] +
+policygraph: [post] +
+processingunit: [get] +
+pushsession: [get] +
+recipe: [get] +
+renderedpolicy: [get] +
+reportsquery: [post] +
+samlprovider: [get] +
+service: [get] +
+servicedependency: [get] +
+statsinfo: [post] +
+statsquery: [get post] +
+suggestedpolicy: [get] +
+tag: [get] +
+tokenscopepolicy: [get] +
+trustednamespace: [get] +
+| Can view everything in a namespace
+
+|"app.developer"
+| alarm: [get] +
+apicheck: [post] +
+claims: [get] +
+defaultenforcerversion: [get] +
+dependencymap: [get] +
+discoverymode: [get] +
+export: [post] +
+externalnetwork: [get] +
+hit: [get] +
+httpresourcespec: [any] +
+import: [post] +
+importreference: [post] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+networkaccesspolicy: [any] +
+networkrulesetpolicy: [any] +
+policygraph: [post] +
+processingunit: [get] +
+pushsession: [get] +
+recipe: [get] +
+renderedpolicy: [get] +
+reportsquery: [post] +
+service: [any] +
+servicedependency: [any] +
+statsinfo: [post] +
+statsquery: [get post] +
+suggestedpolicy: [get] +
+tag: [get] +
+tokenscopepolicy: [any]
+|Can manage policies and view PUs and external networks
+
+|"app.viewer"
+|alarm: [get] +
+apiauthorizationpolicy: [get] +
+apicheck: [post] +
+claims: [get]  +
+defaultenforcerversion: [get] +
+dependencymap: [get] +
+discoverymode: [get] +
+externalnetwork: [get] +
+hit: [get] +
+httpresourcespec: [get] +
+importreference: [get] +
+infrastructurepolicy: [get] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+networkaccesspolicy: [get] +
+networkrulesetpolicy: [get] +
+policygraph: [post] +
+processingunit: [get] +
+pushsession: [get] +
+recipe: [get] +
+renderedpolicy: [get] +
+reportsquery: [post] +
+service: [get] +
+servicedependency: [get] +
+statsinfo: [post] +
+statsquery: [get post] +
+suggestedpolicy: [get] +
+tag: [get] +
+tokenscopepolicy: [get]
+|Can view policies, PUs and external networks
+
+|"platform.viewer"
+|alarm: [get] +
+apicheck: [post] +
+claims: [get] +
+defaultenforcerversion: [get] +
+dependencymap: [get] +
+enforcerprofilemappingpolicy: [get] +
+externalaccess: [get] +
+fileaccess: [get] +
+hit: [get] +
+infrastructurepolicy: [get] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+networkaccesspolicy: [get] +
+networkrulesetpolicy: [get] +
+policygraph: [post] +
+processingunit: [get] +
+pushsession: [get] +
+renderedpolicy: [get] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+suggestedpolicy: [get] +
+tag: [get] +
+useraccesspolicy: [get]
+|Can view data from a platform level
+
+|"compute.editor"
+| alarm: [get] +
+apicheck: [post] +
+claims: [get] +
+defaultenforcerversion: [get] +
+hit: [get] +
+localca: [get] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacemappingpolicy: [any] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+processingunit: [get] +
+pushsession: [get] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+tag: [get]
+|Can only manage processing units
+
+|"compute.viewer"
+|alarm: [get] +
+apicheck: [post] +
+claims: [get] +
+defaultenforcerversion: [get] +
+hit: [get] +
+localca: [get] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacemappingpolicy: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+processingunit: [get] +
+pushsession: [get] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+tag: [get] +
+|Can only view processing units
+
+|"network.editor"
+|alarm: [get] +
+apicheck: [post] +
+claims: [get] +
+defaultenforcerversion: [get] +
+externalnetwork: [any] +
+hit: [get] +
+infrastructurepolicy: [any] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+networkaccesspolicy: [any] +
+networkrulesetpolicy: [any] +
+pushsession: [get] +
+putrafficaction: [any] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+tag: [get]
+|Can manage network policies
+
+|"network.viewer"
+|alarm: [get] +
+apicheck: [post] +
+claims: [get] +
+defaultenforcerversion: [get] +
+externalnetwork: [get] +
+hit: [get] +
+infrastructurepolicy: [get] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+networkaccesspolicy: [get] +
+networkrulesetpolicy: [get] +
+pushsession: [get] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+tag: [get]
+|Can view network policies
+
+|"ruleset.administrator"
+| alarm: [get] +
+apicheck: [post] +
+claims: [get] +
+defaultenforcerversion: [get] +
+externalnetwork: [get] +
+hit: [get] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+networkrulesetpolicy: [any] +
+pushsession: [get] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+tag: [get]
+| Can manage network ruleset policies
+
+|"system.editor"
+|alarm: [get] +
+apicheck: [post] +
+auditprofile: [any] +
+auditprofilemappingpolicy: [any] +
+claims: [get] +
+defaultenforcerversion: [get] +
+enforcer: [any] +
+enforcerprofile: [any] +
+enforcerprofilemappingpolicy: [any] +
+hit: [get] +
+hostservice: [any] +
+hostservicemappingpolicy: [any] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+pushsession: [get] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+tag: [get] +
+useraccesspolicy: [any]
+|Can view and edit everything related to enforcers, profiles and profile mapping
+
+|"system.viewer"
+|alarm: [get] +
+apicheck: [post] +
+auditprofile: [get] +
+auditprofilemappingpolicy: [get] +
+claims: [get] +
+defaultenforcerversion: [get] +
+enforcer: [get] +
+enforcerprofile: [get] +
+enforcerprofilemappingpolicy: [get] +
+hit: [get] +
+hostservice: [get] +
+hostservicemappingpolicy: [get] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+pushsession: [get] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+tag: [get] +
+useraccesspolicy: [get]
+|Can view everything related to enforcers, profiles and profile mapping policies.
+
+|"automation.editor"
+|alarm: [get] +
+apicheck: [post] +
+automation: [any] +
+automationtemplate: [get] +
+claims: [get] +
+defaultenforcerversion: [get] +
+hit: [get] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+pushsession: [get] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+tag: [get]
+|Can view and edit automations. Note that automations run as admin in your namespaces.
+
+|"automation.viewer"
+|alarm: [get] +
+apicheck: [post] +
+automation: [get] +
+automationtemplate: [get] +
+claims: [get] +
+defaultenforcerversion: [get] +
+hit: [get] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+pushsession: [get] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+tag: [get]
+|Can view the automations
+
+|"appcredentials"
+|alarm: [get] +
+apiauthorizationpolicy: [get post] +
+apicheck: [post] +
+appcredential: [get post] +
+claims: [get] +
+defaultenforcerversion: [get] +
+hit: [get] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+pushsession: [get] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+tag: [get]
+|Can create new application credentials. This role will not allow to create authorization with higher privileges
+
+|"namespace.importer"
+|alarm: [get] +
+apicheck: [post] +
+claims: [get] +
+defaultenforcerversion: [get] +
+hit: [get] +
+import: [post] +
+importreference: [post] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+pushsession: [get] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+tag: [get]
+|Can import data into the namespace. This role still requires individual create permissions on imported objects.
+
+|"namespace.exporter"
+|alarm: [get] +
+apicheck: [post] +
+claims: [get] +
+defaultenforcerversion: [get] +
+export: [post] +
+hit: [get] +
+message: [get] +
+metricsquery: [get post] +
+metricsqueryrange: [get post] +
+namespace: [get] +
+namespaceinfo: [get] +
+namespacepolicyinfo: [get] +
+namespacetype: [get] +
+pushsession: [get] +
+reportsquery: [post] +
+statsinfo: [post] +
+statsquery: [get post] +
+tag: [get]
+|Can export data from the namespace. This role still requires individual read permissions on exported objects.
+
+|"service.publisher"
+|servicepublication: [post]
+| Can publish a service.
+
+|"enforcer-installer"
+|appcredential: [any]
+|Can install enforcers
