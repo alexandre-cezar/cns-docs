@@ -10,7 +10,7 @@ Common operational tasks, besides rulesets, external networks and namespaces evo
 
 * Import/Export the configuration
 
-* Manage certificates
+* Manage certificates and App credentials
 
 Let's look into each topic in more details.
 
@@ -78,4 +78,4 @@ You can import a configuration using the command `apoctl api import -f <filename
 
 For additional options, please check the `apoctl` documentation.
 
-== Managing Certificates
+== Managing Certificates and App Credentials

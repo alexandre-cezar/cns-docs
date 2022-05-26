@@ -225,7 +225,24 @@ After the installation is done, you can visualize the Enforcer pods by running t
 image::images/enforcer-ocp4-21.png[width=300,align="center"]
 
 ===== Install Enforcers on Tanzu Kubernetes Grid
+* Step 1 - Navigate to the group Namespace where you want to deploy the Enforcer and once there, click on the Agent/Deploy page.
+
+* Step 2 - Select Daemonset and under ClusterType, select TKGI. Select the CLI Tool Version (the Host OS where the deployment will be executed) and your preferred Installation Mode.
+
+image::images/enforcer-tkgi-1.png[width=400,align="center"]
+
+* Step 3 - Copy the resulting installation script and use it to install the Enforcer on your TKGI cluster.
+
+image::images/enforcer-tkgi-2.png[width=400,align="center"]
+
+After the installation is done, you can visualize the Enforcer pods by looking at the Enforcers tabs
+
+image::images/enforcer-tkgi-3.png[width=300,align="center"]
+
 ===== Install Enforcers on Standard Kubernetes
+Enforcers are supported on standard k8s clusters. Just make sure you pass the proper _cni bin_ and _config paths_ using the `--custom-cni-bin-dir` and `--custom-cni-conf-dir` and the `--custom-cni-chained` options during installation.
+
+image::images/enforcer-k8s-1.png[width=300,align="center"]
 
 === Using Enforcer tags
 Enforcer tags are used when you want to create tags for the Enforcer itself. They are resourceful on environments where security administrators have no permissions to create/modify existing workload tags. +
@@ -287,5 +304,8 @@ You can control for how long you want the Microsegmentation token to be valid du
 ==== Output script (Host only)
 ==== IP Constraint
 ==== Cloud Probes timeout
-The Enforcer can determine if it is running in a cloud environment, such as AWS, GCP, or Azure. Use the `--cloud-probe-timeout` to configure the amount of time to wait for these internal probes to complete during installation. Default is two seconds.
+The Enforcer can determine if it is running in a cloud environment, such as AWS, GCP, or Azure. Use the flag `--cloud-probe-timeout` to configure the amount of time to wait for these internal probes to complete during installation. Default is two seconds. +
 
+==== Metadata Server Tag Retrieval
+The Enforcer pulls the latest information from the CSP metadata server in order to sync its Processing Units with the latest tags available for it (including custom tags).
+Use the flaw `--dynamic-tags-sync-interval` to configure the amount of time that an Enforcer will wait before pulling data. Default is 15 minutes. Setting this value to 0, disables the feature
