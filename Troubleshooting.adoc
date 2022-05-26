@@ -4,7 +4,24 @@ Alexandre Cezar <acezar@paloaltonetworks.com>, May 26, 2022:
 :toc-title:
 :icons: font
 
-Several tools are in place to help you identify issues and troubleshoot them.
+Several tools are in place to help you identify issues and troubleshoot them. Below are the most common issues and guidance on how to troubleshoot them.
 
-== Datapath issues
-When connections are dropped 
+== Connectivity issues
+When connections are dropped
+
+=== Connection Exceptions
+
+=== Enforcer Alarms
+
+=== Packet Analysis
+
+=== Datapath Analysis
+
+== Installation Issues
+
+=== Enforcers fail to complete installation
+
+=== Enforcers fail to connect to Prisma Cloud
+
+== Generating a techsupport file
+
