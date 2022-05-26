@@ -99,6 +99,8 @@ image::images/app-credential-3.png[width=300,align="center"]
 [TIP]
 If you're using the app credential to use it with `apoctl`, save it as an App Credential
 
+For more details about roles and permissions, please read this https://github.com/alexandre-cezar/cns-docs/blob/main/Roles%20and%20Permissions.adoc[page]
+
 === Renew an App Credential
 You can use renew your app credentials. To do this, click on the _Renew_ icon
 

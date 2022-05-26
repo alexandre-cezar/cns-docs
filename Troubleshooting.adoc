@@ -1,0 +1,10 @@
+= Troubleshooting
+Alexandre Cezar <acezar@paloaltonetworks.com>, May 26, 2022:
+:toc:
+:toc-title:
+:icons: font
+
+Several tools are in place to help you identify issues and troubleshoot them.
+
+== Datapath issues
+When connections are dropped 
