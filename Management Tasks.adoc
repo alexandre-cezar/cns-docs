@@ -79,3 +79,55 @@ You can import a configuration using the command `apoctl api import -f <filename
 For additional options, please check the `apoctl` documentation.
 
 == Managing Certificates and App Credentials
+You can manage external certificates and credentials using the Prisma Cloud console.
+
+=== Create an App Credential
+Navigate to Manage/Credentials and select the App Credentials tab
+
+* Step 1 -> Click on the _+_ sign to create a new App Credential
+
+image::images/app-credential-1.png[width=400,align="center"]
+
+* Step 2 -> Name it and define the permissions you want to assign to the credential
+
+image::images/app-credential-2.png[width=400,align="center"]
+
+* Step 3 -> Save it in the desired format.
+
+image::images/app-credential-3.png[width=300,align="center"]
+
+[TIP]
+If you're using the app credential to use it with `apoctl`, save it as an App Credential
+
+=== Renew an App Credential
+You can use renew your app credentials. To do this, click on the _Renew_ icon
+
+A warning message will be displayed stating that the certificate will be renewed and the old certificate will stop working 12h after this operation is done.
+
+image::images/app-credential-5.png[width=300,align="center"]
+
+Once renewed, a new certificate is provided, and it needs to be distributed to its proper users/services
+
+=== Delete an App Credential
+To delete an App Credential, simply click on the delete button.
+
+image::images/app-credential-7.png[width=300,align="center"]
+
+=== Import an external TLS Certificate
+For some tasks that involved external resources that use SSL certificates such as: +
+
+* Rulesets that traverses TLS enabled Load Balancers)
+* TLS enabled syslog collectors
+* TLS enabled proxies
+
+You need to import the device certificate into Prisma Cloud console.
+
+In order to do this, navigate to Manage/Certificates and select the Certificate Management tab
+
+* Step 1 -> Click on the _New Service Certificate_ icon
+
+image::images/certificate-1.png[width=300,align="center"]
+
+* Step 2 -> Import the public and private keys into the console and click on Create
+
+image::images/certificate-2.png[width=300,align="center"]

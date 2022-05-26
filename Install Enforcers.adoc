@@ -54,7 +54,7 @@ On-prem Enforcers uses a short-lived Microsegmentation token, while cloud resour
 
 For Enforcers to be able to use Cloud Auto-Registration, please follow the steps below:
 
-==== Create Auto-Registration for AWS accounts
+==== Create an Auto-Registration for AWS accounts
 * Step 1 - Obtain your AWS cloud account number
 
 * Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the Authorizations tab, click on the "+" button and select "Create a Cloud Registration policy".
@@ -65,7 +65,7 @@ image::images/cloud-registration-1.png[width=550,align="center"]
 
 image::images/cloud-registration-2.png[width=350,align="center"]
 
-==== Create Auto-Registration for Azure subscriptions
+==== Create an Auto-Registration for Azure subscriptions
 * Step 1 - Obtain your Azure subscription ID or Tenant ID
 
 * Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the Authorizations tab, click on the "+" button and select "Create a Cloud Registration policy".
@@ -76,7 +76,7 @@ image::images/cloud-registration-1.png[width=550,align="center"]
 
 image::images/cloud-registration-3.png[width=350,align="center"]
 
-==== Create Auto-Registration for GCP projects
+==== Create an Auto-Registration for GCP projects
 * Step 1 - Obtain your GCP project ID
 
 * Step 2 - On Prisma Cloud, navigate to the  Namespace where you want to deploy the Enforcer and once there, click on the Authorizations tab, click on the "+" button and select "Create a Cloud Registration policy".
@@ -89,6 +89,16 @@ image::images/cloud-registration-4.png[width=350,align="center"]
 
 [NOTE]
 Cloud Auto Registration is available on AWS, Azure and GCP. For other public cloud providers, use the Standard installation method.
+
+==== Create an AutoRegistration using apoctl
+To create an Auto-Registration using `apoctl`, use the following command:
+
+`apoctl api create apiauth \ +
+    -n '<namespace>' \ +
+    -k name '<cloud autoregistration name>' \ +
+    -k subject '[["@auth:realm=<source>", "@auth:<CSP account>"]]' \ +
+    -k authorizedNamespace '<namespace>' \ +
+    -k authorizedIdentities '["@auth:role=enforcer"]'`
 
 ==== Permissions required by Enforcers on public cloud environments.
 In order to retrieve CSP and custom metadata from the CSP metadata server, make sure you have the following permissions assigned to your instances:
@@ -308,4 +318,4 @@ The Enforcer can determine if it is running in a cloud environment, such as AWS,
 
 ==== Metadata Server Tag Retrieval
 The Enforcer pulls the latest information from the CSP metadata server in order to sync its Processing Units with the latest tags available for it (including custom tags).
-Use the flaw `--dynamic-tags-sync-interval` to configure the amount of time that an Enforcer will wait before pulling data. Default is 15 minutes. Setting this value to 0, disables the feature
+Use the flag `--dynamic-tags-sync-interval` to configure the amount of time that an Enforcer will wait before pulling data. Default is 15 minutes. Setting this value to 0, disables the feature

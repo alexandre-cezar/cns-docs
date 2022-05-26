@@ -248,38 +248,6 @@ tag: [get] +
 tokenscopepolicy: [get]
 |Can view policies, PUs and external networks
 
-|"platform.viewer"
-|alarm: [get] +
-apicheck: [post] +
-claims: [get] +
-defaultenforcerversion: [get] +
-dependencymap: [get] +
-enforcerprofilemappingpolicy: [get] +
-externalaccess: [get] +
-fileaccess: [get] +
-hit: [get] +
-infrastructurepolicy: [get] +
-message: [get] +
-metricsquery: [get post] +
-metricsqueryrange: [get post] +
-namespace: [get] +
-namespaceinfo: [get] +
-namespacepolicyinfo: [get] +
-namespacetype: [get] +
-networkaccesspolicy: [get] +
-networkrulesetpolicy: [get] +
-policygraph: [post] +
-processingunit: [get] +
-pushsession: [get] +
-renderedpolicy: [get] +
-reportsquery: [post] +
-statsinfo: [post] +
-statsquery: [get post] +
-suggestedpolicy: [get] +
-tag: [get] +
-useraccesspolicy: [get]
-|Can view data from a platform level
-
 |"compute.editor"
 | alarm: [get] +
 apicheck: [post] +
@@ -326,55 +294,6 @@ statsquery: [get post] +
 tag: [get] +
 |Can only view processing units
 
-|"network.editor"
-|alarm: [get] +
-apicheck: [post] +
-claims: [get] +
-defaultenforcerversion: [get] +
-externalnetwork: [any] +
-hit: [get] +
-infrastructurepolicy: [any] +
-message: [get] +
-metricsquery: [get post] +
-metricsqueryrange: [get post] +
-namespace: [get] +
-namespaceinfo: [get] +
-namespacepolicyinfo: [get] +
-namespacetype: [get] +
-networkaccesspolicy: [any] +
-networkrulesetpolicy: [any] +
-pushsession: [get] +
-putrafficaction: [any] +
-reportsquery: [post] +
-statsinfo: [post] +
-statsquery: [get post] +
-tag: [get]
-|Can manage network policies
-
-|"network.viewer"
-|alarm: [get] +
-apicheck: [post] +
-claims: [get] +
-defaultenforcerversion: [get] +
-externalnetwork: [get] +
-hit: [get] +
-infrastructurepolicy: [get] +
-message: [get] +
-metricsquery: [get post] +
-metricsqueryrange: [get post] +
-namespace: [get] +
-namespaceinfo: [get] +
-namespacepolicyinfo: [get] +
-namespacetype: [get] +
-networkaccesspolicy: [get] +
-networkrulesetpolicy: [get] +
-pushsession: [get] +
-reportsquery: [post] +
-statsinfo: [post] +
-statsquery: [get post] +
-tag: [get]
-|Can view network policies
-
 |"ruleset.administrator"
 | alarm: [get] +
 apicheck: [post] +
@@ -395,7 +314,7 @@ reportsquery: [post] +
 statsinfo: [post] +
 statsquery: [get post] +
 tag: [get]
-| Can manage network ruleset policies
+| Can manage network ruleset policies, but not external networks
 
 |"system.editor"
 |alarm: [get] +
