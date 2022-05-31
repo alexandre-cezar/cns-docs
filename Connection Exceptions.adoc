@@ -33,6 +33,8 @@ A connection exception may be generated on two scenarios:
 
 - SynAckTransmitted - The destination Enforcer replied with a SYN-ACK packet with identity but the handshake could not be completed.
 
+An _expired_ reason means that the session timedout and no packet was received by the reporting side.
+
 == Connection Exception details
 The data view allows you to investigate and analyze all content in a Connection Exception log
 
