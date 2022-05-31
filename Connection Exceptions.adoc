@@ -31,7 +31,7 @@ A connection exception may be generated on two scenarios:
 
 - SynTransmitted - The source Enforcer sent a SYN packet with identity and the response was never received
 
-- SYNACKTransmitted - The destination Enforcer replied with a SYN-ACK packet with identity but the handshake could not be completed.
+- SynAckTransmitted - The destination Enforcer replied with a SYN-ACK packet with identity but the handshake could not be completed.
 
 == Connection Exception details
 The data view allows you to investigate and analyze all content in a Connection Exception log
