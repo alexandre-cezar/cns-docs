@@ -89,6 +89,11 @@ The best practice is to review this setting and customize it by adding additiona
 
 You can find additional information about Enforcer Profiles https://github.com/alexandre-cezar/cns-docs/blob/main/Enforcers.adoc#enforcer-profile[here]
 
+=== Configure your network devices to allow TCP Fast Open
+If your workloads communicate with each through network boundaries protected by FWs, it is important to make sure that these devices are configured to allow TCP SYN and SYN-ACK packets with payloads (where identity is sent). +
+
+Refer to your vendor documentation for details.
+
 === Deploy Enforcers
 Deploying Enforcers in the right namespace makes it easier for CNS Administrators to make sure they have the proper application visibility and are ingesting the proper resource metadata. We do not recommend that you aggregate all Enforcers in a single namespace and we do not recommend that you deploy Enforcers in the default namespace (root).
 
