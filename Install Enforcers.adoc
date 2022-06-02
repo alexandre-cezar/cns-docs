@@ -311,8 +311,13 @@ If you have IPv6 in your environment and wish to monitor and control these conne
 You can control for how long you want the Microsegmentation token to be valid during an Enforcer install. The default is _30 minutes_, but if you want the value to be lower, you can adjust it for _10 minutes_ or if you need the token to be higher, you can adjust it for _1 hour_
 
 ==== Install without activation (Host only)
+This option deploys the agent manager in the host, but it doesn't install and start the Enforcer. +
+It's designed to be used on golden images, where all the instances generated from the base image will have Enforcers with unique IDs, once they're started.
+
 ==== Output script (Host only)
+
 ==== IP Constraint
+
 ==== Cloud Probes timeout
 The Enforcer can determine if it is running in a cloud environment, such as AWS, GCP, or Azure. Use the flag `--cloud-probe-timeout` to configure the amount of time to wait for these internal probes to complete during installation. Default is two seconds. +
 
