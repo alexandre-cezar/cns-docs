@@ -130,7 +130,7 @@ Enforcers ignore Fargate and other serverless workloads in EKS.
 ====
 
 *Host Mode* +
-Enforcers support Host Mode for EKS and GKE
+Enforcers support Host Mode for EKS and GKE clusters
 
 *Supported Linux Distributions* +
 You can deploy the Enforcer on the following supported distributions.

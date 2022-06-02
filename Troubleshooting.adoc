@@ -137,3 +137,7 @@ image::images/troubleshooting-16.png[width=350,align="center"]
 image::images/troubleshooting-17.png[width=200,align="center"]
 
 * Step 5 -> Simulate the issue with Debug Mode enabled and generate a TechSupport file.
+
+[IMPORTANT]
+The _Start_ troubleshooting button only becomes available when the websocket connection from the user device and the console is established, otherwise the button becomes unavailable.
+

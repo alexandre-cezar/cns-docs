@@ -283,8 +283,6 @@ Alternatively, you can enable host mode directly in the Prisma Cloud administrat
 
 image::images/enable-host-mode.png[width=500,align="center"]
 
-For additional information on how use the api-server to manage microsegmentation objects in K8s, please check this https://github.com/alexandre-cezar/cns-docs/blob/main/Host-Mode.adoc[page].
-
 ==== Enable non-transparent proxy support
 Enforcers require access to Prisma Cloud in order to send telemetry data and receive updates and in some environments this can only be achieved through a non-transparent proxy.
 
@@ -313,10 +311,6 @@ You can control for how long you want the Microsegmentation token to be valid du
 ==== Install without activation (Host only)
 This option deploys the agent manager in the host, but it doesn't install and start the Enforcer. +
 It's designed to be used on golden images, where all the instances generated from the base image will have Enforcers with unique IDs, once they're started.
-
-==== Output script (Host only)
-
-==== IP Constraint
 
 ==== Cloud Probes timeout
 The Enforcer can determine if it is running in a cloud environment, such as AWS, GCP, or Azure. Use the flag `--cloud-probe-timeout` to configure the amount of time to wait for these internal probes to complete during installation. Default is two seconds. +
