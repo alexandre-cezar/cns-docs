@@ -36,7 +36,7 @@ When connections are unexpectedly dropped, you can use Prisma Cloud Microsegment
 === Connection Exceptions
 If there's a problem with the identity packet being dropped by an external device (such as a FW or proxy), Enforcer will raise a connection exception log that will provide indicators of this.
 
-For additional details about Connection Exceptions, please red this https://github.com/alexandre-cezar/cns-docs/blob/main/Connection%20Exceptions.adoc[page]
+For additional details about Connection Exceptions, please read this https://github.com/alexandre-cezar/cns-docs/blob/main/Connection%20Exceptions.adoc[page]
 
 === Packet Capture
 If you need to look further at a flow to understand what's happening, you can use the Microsegmentation console to generate a packet capture.
