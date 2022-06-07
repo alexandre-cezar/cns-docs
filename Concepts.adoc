@@ -7,7 +7,7 @@ Alexandre Cezar <acezar@paloaltonetworks.com>, April 1, 2022:
 Learn about the critical components in the Prisma Cloud Identity-Based Microsegmentation solution
 
 == Microsegmentation Console
-The Microsegmentation Console manages all Microsegmentation resources. You can access it from three interfaces.
+The Microsegmentation Console manages all Microsegmentation resources. You can access it from three different interfaces.
 
 * Web interface: a web application accessed through your browser that allows you to define all resources, as well as view a visual representation of all applications that are protected by Microsegmentation. +
 
