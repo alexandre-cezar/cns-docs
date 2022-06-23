@@ -37,6 +37,3 @@ image::images/enforcer-alarm-5.png[width=200,align="center"]
 
 == Resolving Alarms
 To resolve an Alarm, move its state to _Resolved_
-
-== Alarm List
-The list of possible Enforcer alarms are listed below:
