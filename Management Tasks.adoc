@@ -12,6 +12,8 @@ Common operational tasks, besides rulesets, external networks and namespaces evo
 
 * Manage certificates and App credentials
 
+* Roles and Permissions
+
 Let's look into each topic in more details.
 
 == Upgrading Enforcers
@@ -133,3 +135,6 @@ image::images/certificate-1.png[width=300,align="center"]
 * Step 2 -> Import the public and private keys into the console and click on Create
 
 image::images/certificate-2.png[width=300,align="center"]
+
+== Roles and Permissions
+For additional details about roles and permissions, please read this https://github.com/alexandre-cezar/cns-docs/blob/main/Roles%20and%20Permissions.adoc[page]
