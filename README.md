@@ -1,7 +1,7 @@
 # Contents
 * [About](https://github.com/alexandre-cezar/cns-docs/blob/main/About%20Prisma%20Cloud%20Identity%20Based%20Microsegmentation.adoc)
 * [Concepts](https://github.com/alexandre-cezar/cns-docs/blob/main/Concepts.adoc)
-* [How Enforcers work?](https://github.com/alexandre-cezar/cns-docs/blob/main/How%20Enforcers%20work%3F.adoc)
+* [How Enforcers work?](https://github.com/alexandre-cezar/cns-docs/blob/main/how-enforcers-work.adoc)
 * [Get Started](https://github.com/alexandre-cezar/cns-docs/blob/main/Get%20Started.adoc)
 * [System Requirements](https://github.com/alexandre-cezar/cns-docs/blob/main/System%20Requirements.adoc)
 * [Planning a Microsegmentation Deployment](https://github.com/alexandre-cezar/cns-docs/blob/main/Planning.adoc)
