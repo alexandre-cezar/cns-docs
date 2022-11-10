@@ -17,6 +17,8 @@ There are 4 specific alert types supported on Prisma Cloud Microsegmentation:
 
 * Audit -> Alerts are generated when a specific action is executed in the system.
 
+* Suspicious Activity -> Alerts are generated when a Processing Unite communicates with an external address that is known to be malicious
+
 == Alert Components
 There's always two components to an alert:
 
